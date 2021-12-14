@@ -108,7 +108,7 @@ export default class Header
 
     renderMultiMenu: (items) ->
         return "
-            <a class='text-light blue px-4 py-2 dropdown-toggle' type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>Basic dropdown</a> 
+            <a class='text-light blue px-4 py-2 dropdown-toggle' type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>Policy</a> 
             <div class='dropdown-menu'>
                 #{        
                     (items.menu).map((item) -> 
