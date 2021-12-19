@@ -13,8 +13,10 @@ import Testimonial from './components/scripts/renders/Testimonial.coffee';
 import Partner from './components/scripts/renders/Partner.coffee';
 import ContactUs from './components/scripts/renders/ContactUs.coffee';
 import Footer from './components/scripts/renders/Footer.coffee';
+import ScrollToTopBtn from './components/scripts/blocks/ScrollToTopBtn.coffee';
 
 import ScrollToPosition from './components/scripts/functions/ScrollToPosition.coffee';
+import ShowMenu from './components/scripts/functions/ShowMenu.coffee';
 
 // IMport custom style
 import './style.styl';
@@ -37,15 +39,28 @@ const footer = new Footer();
 // Set latest year on copyright notice
 $('#latestYear').text(new Date().getFullYear());
 
-$('#header').html(header.render());
+if (window.innerWidth > 720) {
+	$('#header').html(header.render());
+	$('#products').html(products.render());
+	$('#ourTeam').html(ourTeam.render());
+	$('#testimonials').html(testimonials.render());
+} else {
+	$('#header').html(header.renderMobile());
+	$(header.renderMenu()).insertBefore('header');
+	$('#home').css('margin-top', '5rem');
+	$('#products').html(products.renderMobile());
+	$('#ourTeam').html(ourTeam.renderMobile());
+	$('#testimonials').html(testimonials.renderMobile());
+
+	$(ScrollToTopBtn.generateScrollToTopBtn()).insertAfter('footer');
+}
+
 $('#home').html(carousel.render());
 $('#services').html(services.render());
-$('#products').html(products.render());
 $('#aboutUs').html(aboutUs.render());
-$('#ourTeam').html(ourTeam.render());
-$('#testimonials').html(testimonials.render());
 $('#partners').html(partners.render());
 $('#contactUs').html(contactUs.render());
 $('#footer').html(footer.render());
 
 const scrollToPosition = new ScrollToPosition();
+const showMenu = new ShowMenu();

@@ -26,10 +26,10 @@ export default class Partner
         return "
             #{SectionHeader.renderSectionTitle(@sectionTitleComponent)}
             <div class='container pb-5'>
-                <div class='d-flex flex-row justify-content-around align-items-center'>
+                <div class='d-flex #{if window.innerWidth > 720 then "flex-row" else "flex-column"} justify-content-around align-items-center'>
                     #{@partners.map((partner) ->
                         return "
-                            <a class='rounded w-100' href='#{partner.link}'>
+                            <a class='rounded w-100 my-2 my-md-0' href='#{partner.link}'>
                                 <img class='img-fluid w-100 p-3' src='#{partner.img}' alt='#{partner.alt}'/>
                             </a>
                         "

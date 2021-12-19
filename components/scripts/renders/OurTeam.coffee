@@ -78,20 +78,52 @@ export default class OurTeam
             </button>
         "
 
-    generateTeamContainer: ->
+    renderMobile: ->
+        return "
+            #{SectionHeader.renderSectionTitle(@sectionTitleComponent)}
+            <div id='member-carousel' class='carousel slide h-100' data-ride='carousel'>
+                <ol class='carousel-indicators'>
+                    #{@teamMembers.map((member, key) => 
+                        return "
+                            <li data-target='#member-carousel' data-slide-to='#{key}' #{if key is 0 then "class='active text-black-50'" else ""}></li>
+                        "
+                    ).join("")}
+                </ol>
+
+                <div class='carousel-inner' role='listbox'>
+                    #{@teamMembers.map((member, key) => 
+                        return "
+                        <div class='carousel-item #{if key is 0 then "active"}'>
+                            #{@generateTeamBlock(member)}
+                        </div>
+                        "
+                    ).join("")}
+                </div>
+                <a class='carousel-control-prev' href='#member-carousel' role='button' data-slide='prev'>
+                    <span class='carousel-control-prev-icon black py-2 px-1 rounded' aria-hidden='true'></span>
+                    <span class='sr-only'>Previous</span>
+                </a>
+                <a class='carousel-control-next' href='#member-carousel' role='button' data-slide='next'>
+                    <span class='carousel-control-next-icon black py-2 px-1 rounded' aria-hidden='true'></span>
+                    <span class='sr-only'>Next</span>
+                </a>
+            </div>
+        "
 
     generateTeamBlock: (teamMember) ->
         return "
-            <div class='card hoverable'>
-                <div class='mx-auto mt-3 py-3'>
-                    <img class='img-thumbnail rounded-circle' src='#{teamMember.img}' alt='Card image cap' style='width: 12.5rem; height: 12.5rem;'>
-                </div>
+            #{if window.innerWidth <= 720 then "<div class='col-12 pb-5 pb-md-0'>" else ""}
+                <div class='card hoverable'>
+                    <div class='mx-auto mt-1 mt-md-2 py-3'>
+                        <img class='img-thumbnail rounded-circle' src='#{teamMember.img}' alt='Card image cap' style='width: 12.5rem; height: 12.5rem;'>
+                    </div>
 
-                <h2 class='card-title text-center p-0 m-0 py-2'>#{teamMember.name}</h2>
-                <p class='text-center text-muted p-0 m-0'>#{teamMember.title}</p>
-                <hr>
-                <div class='card-body'>
-                    <p class='card-text'>#{teamMember.description}</p>
+                    <h2 class='card-title text-center p-0 m-0 py-2'>#{teamMember.name}</h2>
+                    <p class='text-center text-muted p-0 m-0'>#{teamMember.title}</p>
+                    <hr>
+                    <div class='card-body'>
+                        <p class='card-text'>#{teamMember.description}</p>
+                    </div>
                 </div>
-            </div>
+            #{if window.innerWidth <= 720 then "</div>" else ""}
         "

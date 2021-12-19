@@ -74,10 +74,41 @@ export default class Testimonial
             </div>
         "
 
-    generateTestimonialBody: (testimonial) ->
-
+    renderMobile: ->
         return "
-            <div class='my-card py-2'>
+            #{SectionHeader.renderSectionTitle(@sectionTitleComponent)}
+            <div id='testimonial-carousel' class='carousel slide h-100' data-ride='carousel'>
+                <ol class='carousel-indicators'>
+                    #{@testimonials.map((testimonial, key) => 
+                        return "
+                            <li data-target='#testimonial-carousel' data-slide-to='#{key}' class='grey #{if key is 0 then "active" else ""}'></li>
+                        "
+                    ).join("")}
+                </ol>
+
+                <div class='carousel-inner' role='listbox'>
+                    #{@testimonials.map((testimonial, key) => 
+                        return "
+                        <div class='carousel-item #{if key is 0 then "active"}'>
+                            #{@generateTestimonialBody(testimonial)}
+                        </div>
+                        "
+                    ).join("")}
+                </div>
+                <a class='carousel-control-prev' href='#testimonial-carousel' role='button' data-slide='prev'>
+                    <span class='carousel-control-prev-icon black py-2 px-1 rounded' aria-hidden='true'></span>
+                    <span class='sr-only'>Previous</span>
+                </a>
+                <a class='carousel-control-next' href='#testimonial-carousel' role='button' data-slide='next'>
+                    <span class='carousel-control-next-icon black py-2 px-1 rounded' aria-hidden='true'></span>
+                    <span class='sr-only'>Next</span>
+                </a>
+            </div>
+        "
+
+    generateTestimonialBody: (testimonial) ->
+        return "
+            #{if window.innerWidth <= 720 then "<div class='col-12 pb-5 pb-md-0'>" else "<div class='my-card py-2'>"}
                 <div class='card'>
                     <img class='card-img-top w-100 h-100 p-0 m-0' src='#{testimonial.img}' alt='Card image cap'>
                     <div class='card-body p-0 m-0'>

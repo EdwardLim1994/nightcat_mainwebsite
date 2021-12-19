@@ -74,7 +74,7 @@ export default class Services
                         <p class='text-white text-center d-block' style='text-shadow:1px 1px rgba(0, 0, 0, 0.6);'>#{service.description}</p>
                     </div>
                 </div>   
-                <img class='img-fluid w-100 h-100' style='z-index:10;' src='#{service.img}' />
+                <img class='img-fluid #{if window.innerWidth > 720 then "w-100 h-100" else "vw-100"}' style='z-index:10;height: 20rem;' src='#{service.img}' />
                 <div class='mask flex-center waves-effect waves-light' style='z-index:30; background-color: rgba(0, 0, 0, 0.5);'>
                 </div>
             </div>

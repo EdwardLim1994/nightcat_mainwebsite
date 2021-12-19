@@ -19,7 +19,7 @@ export default class ContactUs
                     <p class='text-center'>#{@sectionTitleComponent.subtitle}</p>
                 </div>
                 <div class='row d-flex'>
-                    <div class='col-12 col-md-6 border-right'>
+                    <div class='order-2 order-md-1 col-12 col-md-6 border-right'>
                         <a class='' href='tel:+6 0126113810'>
                             <div class='row'>
                                 <div class='col-2 text-right'>
@@ -77,21 +77,21 @@ export default class ContactUs
                             </div>
                         </div>
                     </div>
-                    <div class='col-12 col-md-6'>
-                        <div class='row w-100'>
-                            <div class='col-12 col-md-6'>
-                                <input id='name' type='text' class=' w-100  p-1 pl-2 mb-3 rounded-lg border' placeholder='Name' />
+                    <div class='order-1 order-md-2 col-12 col-md-6 mb-4 mb-md-0'>
+                        <div class='row p-0 m-0 w-100'>
+                            <div class='p-0 m-0 col-12 col-md-6'>
+                                <input id='name' type='text' class=' w-100  p-1 pl-md-2 mb-3 rounded-lg border' placeholder='Name' />
                             </div>
-                            <div class='col-12 col-md-6'>
-                                <input id='name' type='mail' class=' w-100  p-1 pl-2 mb-3 rounded-lg border' placeholder='Email' />
+                            <div class='p-0 m-0 col-12 col-md-6'>
+                                <input id='name' type='mail' class=' w-100  p-1 pl-md-2 mb-3 rounded-lg border' placeholder='Email' />
                             </div>
-                            <div class='col-12'>
-                                <input id='name' type='text' class=' w-100  p-1 pl-2 mb-3 rounded-lg border' placeholder='Subject' />
+                            <div class='p-0 m-0 col-12'>
+                                <input id='name' type='text' class=' w-100  p-1 pl-md-2 mb-3 rounded-lg border' placeholder='Subject' />
                             </div>
-                            <div class='col-12'>
+                            <div class='p-0 m-0 col-12'>
                                 <textarea class=' w-100  p-1 pl-2 mb-3 rounded-lg border' rows='10' placeholder='Message'></textarea>
                             </div>
-                            <div class='col-12'>
+                            <div class='p-0 m-0 col-12'>
                                 <button class='btn btn-info m-0 w-100' id='contact-form-submit'>Send</button>
                             </div>
                         </div>
