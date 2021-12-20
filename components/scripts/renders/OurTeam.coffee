@@ -1,5 +1,6 @@
 import $ from "jquery"
 import SectionHeader from "../blocks/SectionHeader.coffee"
+import ScrollToContactUsBtn from "../blocks/ScrollToContactUsBtn.coffee"
 
 export default class OurTeam
     constructor: ->
@@ -72,10 +73,10 @@ export default class OurTeam
                 }
                 </div>
             </div>
-            <button id='join-btn' class='btn btn-primary py-3 w-100 m-0'>
-                <p class='p-0 m-0'>Want to join us?</p>
-                <i class='fas fa-arrow-down'></i>
-            </button>
+            #{ScrollToContactUsBtn.render({
+                id: "join-btn",
+                title: "Want to join us?"
+            })}
         "
 
     renderMobile: ->

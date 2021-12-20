@@ -30,7 +30,7 @@ export default class Partner
                     #{@partners.map((partner) ->
                         return "
                             <a class='rounded w-100 my-2 my-md-0' href='#{partner.link}'>
-                                <img class='img-fluid w-100 p-3' src='#{partner.img}' alt='#{partner.alt}'/>
+                                <img class='img-fluid w-100 p-3 partner__service' src='#{partner.img}' alt='#{partner.alt}'/>
                             </a>
                         "
                     ).join("")}

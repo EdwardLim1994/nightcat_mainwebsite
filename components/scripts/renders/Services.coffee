@@ -67,14 +67,14 @@ export default class Services
     generateServiceBlock: (service) ->
 
         return "
-            <div class='view zoom position-relative col-12 col-md-3 p-0 m-0'>
-                <div class='position-absolute w-100 h-100 d-flex flex-column align-items-center justify-content-end' style='z-index:50;'>
+            <div class='services view zoom position-relative col-12 col-md-3 p-0 m-0'>
+                <div class='services__body position-absolute w-100 d-flex flex-column align-items-center justify-content-end' style='z-index:50;'>
                     <div class='w-100 h-100 px-3' style='background-color:rgba(0, 145, 255, 0.8);'>
-                        <h4 class='w-100 h-20 white-text text-center p-0 m-0 my-4 h4 h4-responsive'>#{service.title}</h4>
-                        <p class='text-white text-center d-block' style='text-shadow:1px 1px rgba(0, 0, 0, 0.6);'>#{service.description}</p>
+                        <h5 class='w-100 h-20 white-text text-center p-0 m-0 my-4 h4 h4-responsive'>#{service.title}</h5>
+                        <p class='text-white text-center services__description' style='text-shadow:1px 1px rgba(0, 0, 0, 0.6);'>#{service.description}</p>
                     </div>
                 </div>   
-                <img class='img-fluid #{if window.innerWidth > 720 then "w-100 h-100" else "vw-100"}' style='z-index:10;height: 20rem;' src='#{service.img}' />
+                <img class='services__img img-fluid #{if window.innerWidth > 720 then "w-100 h-100" else "vw-100"}' style='z-index:10;height: 20rem;' src='#{service.img}' />
                 <div class='mask flex-center waves-effect waves-light' style='z-index:30; background-color: rgba(0, 0, 0, 0.5);'>
                 </div>
             </div>

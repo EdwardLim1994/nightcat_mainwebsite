@@ -7,82 +7,82 @@ export default class Header
         @headerMenu = [
             {
                 type: "single",
-                title: "Home",
+                title: "home",
                 link: "#home"
                 scrollTop_desktop: 0,
                 scrollTop_mobile: 0
             },
             {
                 type: "single",
-                title: "Services",
+                title: "services",
                 link: "#services"
                 scrollTop_desktop: 0,
                 scrollTop_mobile: 0
             },
             {
                 type: "single",
-                title: "Products",
+                title: "products",
                 link: "#products"
                 scrollTop_desktop: 0,
                 scrollTop_mobile: 0
             },
             {
                 type: "single",
-                title: "About Us",
+                title: "about us",
                 link: "#aboutUs"
                 scrollTop_desktop: 0,
                 scrollTop_mobile: 0
             },
             {
                 type: "single",
-                title: "Our Team",
+                title: "our team",
                 link: "#ourTeam"
                 scrollTop_desktop: 0,
                 scrollTop_mobile: 0
             },
             {
                 type: "single",
-                title: "Testimonials",
+                title: "testimonials",
                 link: "#testimonials"
                 scrollTop_desktop: 0,
                 scrollTop_mobile: 0
             },
             {
                 type: "single",
-                title: "Partners",
+                title: "partners",
                 link: "#partners"
                 scrollTop_desktop: 0,
                 scrollTop_mobile: 0
             },
             {
                 type: "single",
-                title: "Contact Us",
+                title: "contact us",
                 link: "#contactUs"
                 scrollTop_desktop: 0,
                 scrollTop_mobile: 0
             },
             {
                 type: "multi",
-                title: "Policy",
+                title: "policy",
                 menu: [
                     {
                         type: "single",
-                        title: "Privary Policy",
+                        title: "privary policy",
                         link: "#privaryPolicy"
                     },
                     {
                         type: "single",
-                        title: "Return & Refund",
+                        title: "return & refund",
                         link: "#returnRefund"
                     },
                     {
                         type: "single",
-                        title: "Shipping Policy",
+                        title: "shipping policy",
                         link: "#shippingPolicy"
                     },
                     {
                         type: "single",
-                        title: "Terms & Condition",
+                        title: "terms & condition",
                         link: "#termsCondition"
                     },
                 ]
@@ -93,12 +93,12 @@ export default class Header
     render: ->
         return "
             <div class='blue darken-1 d-flex justify-content-center align-items-center flex-column'>
-                <img class='img-fluid rounded p-2' src='#{@titleImage}' alt='Nightcat Logo' style='width: 5%;'/>
+                <img class='img-fluid rounded p-2' src='#{@titleImage}' alt='Nightcat Logo' style='width: 6%;'/>
                 <h2 class='text-white h2 h2-responsive text-uppercase font-weight-bold p-0 m-0'>Nightcat Digital Solutions</h2>
-                <p class='text-white small p-0 m-0 mb-3'>Improving Traditional Business Model and Challenge New Technology Limits</p>
+                <p class='text-white small p-0 m-0 mb-2'>Improving Traditional Business Model and Challenge New Technology Limits</p>
             </div>
             <div class='blue lighten-1'>
-                <ul class='text-white d-flex flex-row justify-content-center mb-0' style='list-style-type: none;'>
+                <ul class='text-white d-flex flex-row justify-content-center m-0 p-0' style='list-style-type: none;'>
                     #{@headerMenu.map(((item) -> @renderMenuList(item)).bind(@)).join("")}
                 </ul>
             </div>
@@ -144,18 +144,18 @@ export default class Header
 
     renderSingleMenu: (item) ->
         return "
-            <li class='blue px-5 py-3 px-md-4 py-md-2'>
-                <a class='text-light text-center' id='#{(item.title).toLowerCase()}-menuBtn' href='#{item.link}'>#{item.title}</a>
+            <li class='d-flex align-items-center #{if window.innerWidth <= 720 then "w-100" else ""}'>
+                <a class='text-center px-5 py-3 px-md-4 py-md-2 text-capitalize menuButton w-100' id='#{(item.link).replace("#", "")}-menuBtn' >#{item.title}</a>
             </li> 
         "
 
     renderMultiMenu: (items) ->
         return "
-            <a class='text-light blue px-5 py-3 px-md-4 py-md-2 dropdown-toggle' type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>Policy</a> 
+            <a class='text-center px-5 py-3 px-md-4 py-md-2 dropdown-toggle text-capitalize menuButton' type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>#{items.title}</a> 
             <div class='dropdown-menu #{if window.innerWidth <= 720 then "vw-100"}'>
                 #{        
                     (items.menu).map((item) -> 
-                        return "<a class='dropdown-item' href='#{item.link}'>#{item.title}</a>"
+                        return "<a class='dropdown-item' >#{item.title}</a>"
                     ).join("")
                 }
             </div>

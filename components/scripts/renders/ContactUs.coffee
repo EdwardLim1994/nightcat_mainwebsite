@@ -14,10 +14,7 @@ export default class ContactUs
         return "
             
             <div class='container-fluid px-3 py-2'>
-                <div class='py-2 pl-3'>
-                    <h2 class='text-center h2 h2-responsive text-uppercase'>#{@sectionTitleComponent.title}</h2>
-                    <p class='text-center'>#{@sectionTitleComponent.subtitle}</p>
-                </div>
+                #{SectionHeader.renderSectionTitle(@sectionTitleComponent)}
                 <div class='row d-flex'>
                     <div class='order-2 order-md-1 col-12 col-md-6 border-right'>
                         <a class='' href='tel:+6 0126113810'>
@@ -56,16 +53,16 @@ export default class ContactUs
                         <div class='row mb-4'>
                             <div class='col-12 d-flex justify-content-around'>
                                 <a id='whatsapp-link'>
-                                    <i class='fab fa-whatsapp fa-2x'></i>
+                                    <i class='fab fa-whatsapp fa-2x whatsapp'></i>
                                 </a>
-                                <a id='facebook-link'>
-                                    <i class='fab fa-facebook fa-2x'></i>
+                                <a id='facebook-link' href='https://www.facebook.com/nightcatdigitalsolutions'>
+                                    <i class='fab fa-facebook fa-2x facebook'></i>
                                 </a>
-                                <a id='instagram-link'>
-                                    <i class='fab fa-instagram fa-2x'></i>
+                                <a id='instagram-link' href='https://www.instagram.com/nightcatdigitalsolutions'>
+                                    <i class='fab fa-instagram fa-2x instagram'></i>
                                 </a>
-                                <a id='twitter-link'>
-                                    <i class='fab fa-twitter fa-2x'></i>
+                                <a id='twitter-link' href='https://twitter.com/nightcatdigital'>
+                                    <i class='fab fa-twitter fa-2x twitter'></i>
                                 </a>
                             </div>
                         </div>

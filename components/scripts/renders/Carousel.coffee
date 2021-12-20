@@ -8,6 +8,21 @@ export default class Carousel
                 title: "",
                 description: ""
             }
+            {
+                img: "",
+                title: "",
+                description: ""
+            }
+            {
+                img: "",
+                title: "",
+                description: ""
+            }
+            {
+                img: "",
+                title: "",
+                description: ""
+            }
         ]
         return
 

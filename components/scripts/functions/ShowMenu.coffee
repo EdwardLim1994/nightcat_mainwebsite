@@ -15,8 +15,6 @@ export default class ShowMenu
         # @headerMenuClose.click(() => @headerMenuBody.removeClass("d-block").addClass("d-none"))
 
         @headerMenuBtn.click(() =>  
-            
-
             if @headerMenuBody.hasClass("d-none")
                 @headerMenuBtn.find("i").removeClass("fa-bars").addClass("fa-times")
             else

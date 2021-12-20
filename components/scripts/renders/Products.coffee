@@ -45,10 +45,12 @@ export default class Products
                 img: "/images/products/umobile.jpg"
                 description: "
                     <ul class='card-text'>
+                        <li class='card_body--lighterText'>GX68</li>
                         <li class='card_body--lighterText'>Call Tanpa Had / Unlimited Call</li>
                         <li class='card_body--lighterText'>Data Tanpa Had / Unlimited Data</li>
-                        <li class='card_body--lighterText'>Bulanan / Monthly RM35</li>
-                        <li class='card_body--lighterText'>Sim Card RM10</li>
+                        <li class='card_body--lighterText'>Kepantasan Tanpa Had / Speed Without Capping</li>
+                        <li class='card_body--lighterText'>Bulanan / Monthly RM68</li>
+                        <li class='card_body--lighterText'>Pascabayar / Postpaid</li>
                     </ul>
                 ",
             },
@@ -59,9 +61,10 @@ export default class Products
                 img: "/images/products/umobile.jpg"
                 description: "
                     <ul class='card-text'>
+                        <li class='card_body--lighterText'>GX30</li>
                         <li class='card_body--lighterText'>Call Tanpa Had / Unlimited Call</li>
                         <li class='card_body--lighterText'>Data Tanpa Had / Unlimited Data</li>
-                        <li class='card_body--lighterText'>Bulanan / Monthly RM35</li>
+                        <li class='card_body--lighterText'>Bulanan / Monthly RM30</li>
                         <li class='card_body--lighterText'>Sim Card RM10</li>
                     </ul>
                 ",
@@ -114,14 +117,14 @@ export default class Products
     renderCardsContainer: (product) ->
         return "
         <div class='col-12 col-md-3 pb-5 pb-md-0'>
-            <div class='card hoverable'>
+            <div class='product card hoverable'>
                 <div class='blue card-header text-uppercase text-center text-white'>#{product.name}</div>
                 <img class='card-img-top mx-auto p-3' src='#{product.img}' alt='Card image cap' style='max-width:250px!important;max-height:320px!important;'>
-                <a class='blue lighten-2 hoverable w-100 text-center text-white d-flex flex-column py-2'>
+                <a class='product__detailBtn blue lighten-2 hoverable w-100 text-center text-white d-flex flex-column py-2'>
                     <i class='fas fa-angle-up'></i>
                     View Detail
-                </a>  
-                <div class='card-body d-block'>
+                </a> 
+                <div class='product__detailBody card-body' data-is-active='false'>
                     #{product.description}
                 </div>
                 <div class='card-footer text-center'>

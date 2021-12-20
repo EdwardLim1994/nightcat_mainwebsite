@@ -1,5 +1,6 @@
 import $ from "jquery"
 import SectionHeader from "../blocks/SectionHeader.coffee"
+import ScrollToContactUsBtn from "../blocks/ScrollToContactUsBtn.coffee"
 
 export default class Testimonial
     constructor: ->
@@ -72,6 +73,9 @@ export default class Testimonial
                     </div>
                 </div>
             </div>
+            #{ScrollToContactUsBtn.render({
+                title: "Need consultants?"
+            })}
         "
 
     renderMobile: ->
@@ -104,6 +108,9 @@ export default class Testimonial
                     <span class='sr-only'>Next</span>
                 </a>
             </div>
+            #{ScrollToContactUsBtn.render({
+                title: "Need consultants?"
+            })}
         "
 
     generateTestimonialBody: (testimonial) ->

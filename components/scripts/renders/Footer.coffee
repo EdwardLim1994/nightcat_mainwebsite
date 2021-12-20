@@ -8,7 +8,7 @@ export default class Footer
         return "
             <div class='text-center blue'>
                 <p class='p-0 m-0 py-2 footer-copyright text-white'>
-                    <a class='text-light' href='https://www.nightcatdigitalsolutions.com/'>NIGHTCAT DIGITAL SOLUTIONS</a> © 2013-#{new Date().getFullYear()}. #{if window.innerWidth <= 720 then "<br>"}ALL RIGHTS RESERVED.
+                    <a class='text-light' href='https://www.nightcatdigitalsolutions.com/'>NIGHTCAT DIGITAL SOLUTIONS</a> © 2013-#{new Date().getFullYear()}. #{if window.innerWidth <= 720 then "<br>" else ""}ALL RIGHTS RESERVED.
                 </p>
             </div>
         "
