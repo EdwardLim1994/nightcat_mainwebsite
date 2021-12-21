@@ -98,7 +98,7 @@ export default class Header
                 <p class='text-white small p-0 m-0 mb-2 header__subtitle'>Improving Traditional Business Model and Challenge New Technology Limits</p>
             </div>
             <div class='header__menuBackground'>
-                <ul class='text-white d-flex flex-row justify-content-center m-0 p-0' style='list-style-type: none;'>
+                <ul class='header__menuBody text-white d-flex flex-row justify-content-center m-0 p-0'>
                     #{@headerMenu.map(((item) -> @renderMenuList(item)).bind(@)).join("")}
                 </ul>
             </div>
@@ -107,7 +107,7 @@ export default class Header
     renderMobile: ->
         return "
             <div class='blue darken-1 d-flex justify-content-center align-items-center flex-column vw-100 p-0 m-0'>
-                <img class='img-fluid rounded p-1' src='#{@titleImage}' alt='Nightcat Logo' style='width: 20%;'/>
+                <img class='img-fluid rounded p-1 header__logo' src='#{@titleImage}' alt='Nightcat Logo'/>
                 <h2 class='text-white text-center h2 h2-responsive text-uppercase font-weight-bold mt-1 p-2 p-0 m-0'>Nightcat Digital Solutions</h2>
             </div>
             <div class='clearfix vw-100 position-absolute fixed-top'>
@@ -119,8 +119,8 @@ export default class Header
     
     renderMenu: ->
         return "
-            <div id='header-menu-body' class='position-fixed vh-100 vw-100 m-0 p-0 blue lighten-3 d-none' style='z-index:1600!important;'>
-                <ul class='text-white d-flex flex-column justify-content-center w-100 p-0 m-0' style='list-style-type: none;'>
+            <div id='header-menu-body' class='header__menuInnerBody position-fixed vh-100 vw-100 m-0 p-0 blue lighten-3 d-none'>
+                <ul class='header_menuBody text-white d-flex flex-column justify-content-center w-100 p-0 m-0'>
                     #{
                     # "<li class='px-5 py-3 px-md-4 py-md-2 d-flex justify-content-end'>
                     #     <a id='header-menu-close'>

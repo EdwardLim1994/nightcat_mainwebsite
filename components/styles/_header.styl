@@ -1,10 +1,20 @@
 .header
-    &__menuBackground
-        background-color rgb(52, 125, 209) !important
+    &__menu
+        &Background
+            background-color rgb(52, 125, 209) !important
+
+        &Body
+            list-style-type none
+
+        &InnerBody
+            z-index 1600 !important
 
     &__logo
-        width 6%
+        width 20%
         transition all 0.3s ease-in-out
+
+        @media (min-width 760px)
+            width 6%
 
         &--hidden
             width 0%

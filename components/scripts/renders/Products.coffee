@@ -119,7 +119,7 @@ export default class Products
         <div class='col-12 col-md-3 pb-5 pb-md-0'>
             <div class='product card hoverable'>
                 <div class='blue card-header text-uppercase text-center text-white'>#{product.name}</div>
-                <img class='card-img-top mx-auto p-3' src='#{product.img}' alt='Card image cap' style='max-width:250px!important;max-height:320px!important;'>
+                <img class='product__img card-img-top mx-auto p-3' src='#{product.img}' alt='#{product.name} image'>
                 <a class='product__detailBtn blue lighten-2 hoverable w-100 text-center text-white d-flex flex-column py-2'>
                     <i class='fas fa-angle-up'></i>
                     View Detail

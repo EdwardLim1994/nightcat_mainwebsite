@@ -116,7 +116,7 @@ export default class OurTeam
             #{if window.innerWidth <= 720 then "<div class='col-12 pb-5 pb-md-0'>" else ""}
                 <div class='card hoverable'>
                     <div class='mx-auto mt-1 mt-md-2 py-3'>
-                        <img class='img-thumbnail rounded-circle' src='#{teamMember.img}' alt='Card image cap' style='width: 12.5rem; height: 12.5rem;'>
+                        <img class='img-thumbnail rounded-circle teamMember__thumbnail' src='#{teamMember.img}' alt='#{teamMember.name} Thumbnail>
                     </div>
 
                     <h2 class='card-title text-center p-0 m-0 py-2'>#{teamMember.name}</h2>
