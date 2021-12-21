@@ -93,11 +93,11 @@ export default class Header
     render: ->
         return "
             <div class='blue darken-1 d-flex justify-content-center align-items-center flex-column'>
-                <img class='img-fluid rounded p-2' src='#{@titleImage}' alt='Nightcat Logo' style='width: 6%;'/>
+                <img class='img-fluid rounded p-2 header__logo' src='#{@titleImage}' alt='Nightcat Logo'/>
                 <h2 class='text-white h2 h2-responsive text-uppercase font-weight-bold p-0 m-0'>Nightcat Digital Solutions</h2>
-                <p class='text-white small p-0 m-0 mb-2'>Improving Traditional Business Model and Challenge New Technology Limits</p>
+                <p class='text-white small p-0 m-0 mb-2 header__subtitle'>Improving Traditional Business Model and Challenge New Technology Limits</p>
             </div>
-            <div class='blue lighten-1'>
+            <div class='header__menuBackground'>
                 <ul class='text-white d-flex flex-row justify-content-center m-0 p-0' style='list-style-type: none;'>
                     #{@headerMenu.map(((item) -> @renderMenuList(item)).bind(@)).join("")}
                 </ul>
@@ -145,13 +145,13 @@ export default class Header
     renderSingleMenu: (item) ->
         return "
             <li class='d-flex align-items-center #{if window.innerWidth <= 720 then "w-100" else ""}'>
-                <a class='text-center px-5 py-3 px-md-4 py-md-2 text-capitalize menuButton w-100' id='#{(item.link).replace("#", "")}-menuBtn' >#{item.title}</a>
+                <a class='text-center px-5 py-3 px-md-4 py-md-2 text-capitalize button__headerMenu w-100' id='#{(item.link).replace("#", "")}-menuBtn' >#{item.title}</a>
             </li> 
         "
 
     renderMultiMenu: (items) ->
         return "
-            <a class='text-center px-5 py-3 px-md-4 py-md-2 dropdown-toggle text-capitalize menuButton' type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>#{items.title}</a> 
+            <a class='text-center px-5 py-3 px-md-4 py-md-2 dropdown-toggle text-capitalize button__headerMenu' type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>#{items.title}</a> 
             <div class='dropdown-menu #{if window.innerWidth <= 720 then "vw-100"}'>
                 #{        
                     (items.menu).map((item) -> 

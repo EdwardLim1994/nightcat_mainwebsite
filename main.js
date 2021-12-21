@@ -4,6 +4,7 @@ import AOS from 'aos';
 
 // import custom components
 import Header from './components/scripts/renders/Header.coffee';
+import Home from './components/scripts/renders/Home.coffee';
 import Carousel from './components/scripts/renders/Carousel.coffee';
 import Services from './components/scripts/renders/Services.coffee';
 import Products from './components/scripts/renders/Products.coffee';
@@ -28,6 +29,7 @@ import './style.styl';
 AOS.init();
 
 const header = new Header();
+const home = new Home();
 const carousel = new Carousel();
 const services = new Services();
 const products = new Products();
