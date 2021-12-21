@@ -77,19 +77,19 @@ export default class ContactUs
                     <div class='order-1 order-md-2 col-12 col-md-6 mb-4 mb-md-0'>
                         <div class='row p-0 m-0 w-100'>
                             <div class='p-0 m-0 col-12 col-md-6'>
-                                <input id='name' type='text' class=' w-100  p-1 pl-md-2 mb-3 rounded-lg border' placeholder='Name' />
+                                <input id='contactName' type='text' class=' w-100  p-1 pl-md-2 mb-3 rounded-lg border' placeholder='Name' required/>
                             </div>
                             <div class='p-0 m-0 col-12 col-md-6'>
-                                <input id='name' type='mail' class=' w-100  p-1 pl-md-2 mb-3 rounded-lg border' placeholder='Email' />
+                                <input id='contactEmail' type='email' class=' w-100  p-1 pl-md-2 mb-3 rounded-lg border' placeholder='Email' required/>
                             </div>
                             <div class='p-0 m-0 col-12'>
-                                <input id='name' type='text' class=' w-100  p-1 pl-md-2 mb-3 rounded-lg border' placeholder='Subject' />
+                                <input id='contactSubject' type='text' class=' w-100  p-1 pl-md-2 mb-3 rounded-lg border' placeholder='Subject' required/>
                             </div>
                             <div class='p-0 m-0 col-12'>
-                                <textarea class=' w-100  p-1 pl-2 mb-3 rounded-lg border' rows='10' placeholder='Message'></textarea>
+                                <textarea id='contactMessage' class=' w-100  p-1 pl-2 mb-3 rounded-lg border' rows='10' placeholder='Message' required></textarea>
                             </div>
                             <div class='p-0 m-0 col-12'>
-                                <button class='btn btn-info m-0 w-100' id='contact-form-submit'>Send</button>
+                                <button id='contactForm-submitBtn' class='btn btn-info m-0 w-100' id='contact-form-submit'>Send</button>
                             </div>
                         </div>
                     </div>

@@ -11,10 +11,15 @@ export default class Products
 
         @products = [
             {
+                id: "contact-hotlink45"
                 name: "hotlink",
-                price: "RM40.00",
+                price: "RM45.00",
                 sold: "25"
                 img: "/images/products/hotlink.jpg"
+                message: {
+                    mobile: "https://wa.me/+60126113810?text=I am interested in HOTLINK with price RM 45.00",
+                    desktop: "https://web.whatsapp.com/send?phone=%2B60126113810&text=I+am+interested+in+Hotlink+with+price+RM+45.00&app_absent=0"
+                }
                 description: "
                     <ul class='card-text'>
                         <li class='card_body--lighterText'>Call Tanpa Had / Unlimited Call</li>
@@ -25,10 +30,15 @@ export default class Products
                 ",
             },
             {
+                id: "contact-celcom45"
                 name: "celcom",
-                price: "RM40.00",
+                price: "RM45.00",
                 sold: "25"
                 img: "/images/products/celcom.jpg"
+                message: {
+                    mobile: "https://wa.me/+60126113810?text=I am interested in CELCOM with price RM 45.00",
+                    desktop: "https://web.whatsapp.com/send?phone=%2B60126113810&text=I+am+interested+in+Celcom+with+price+RM+45.00&app_absent=0"
+                }
                 description: "
                     <ul class='card-text'>
                         <li class='card_body--lighterText'>Call Tanpa Had / Unlimited Call</li>
@@ -39,10 +49,15 @@ export default class Products
                 ",
             },
             {
+                id: "contact-umobile68"
                 name: "u mobile",
-                price: "RM40.00",
+                price: "RM68.00",
                 sold: "25"
                 img: "/images/products/umobile.jpg"
+                message: {
+                    mobile: "",
+                    desktop: ""
+                }
                 description: "
                     <ul class='card-text'>
                         <li class='card_body--lighterText'>GX68</li>
@@ -55,10 +70,15 @@ export default class Products
                 ",
             },
             {
+                id: "contact-umobile40"
                 name: "u mobile",
                 price: "RM40.00",
                 sold: "25"
                 img: "/images/products/umobile.jpg"
+                message: {
+                    mobile: "https://wa.me/+60126113810?text=I am interested in UMOBILE with price RM 40.00",
+                    desktop: "https://web.whatsapp.com/send?phone=%2B60126113810&text=I+am+interested+in+Umobile+with+price+RM+40.00&app_absent=0"
+                }
                 description: "
                     <ul class='card-text'>
                         <li class='card_body--lighterText'>GX30</li>
@@ -132,7 +152,7 @@ export default class Products
                         <h4 class='h4 h4-responsive font-weight-bold p-0 m-0 pt-3'>#{product.price}</h4>
                         <p class='small text-muted pl-5'>#{product.sold} sold</p>
                     </div>
-                    <button class='btn btn-primary rounded'>Buy Now</button>
+                    <button id='#{product.id}' class='btn btn-primary rounded'>Buy Now</button>
                 </div>
             </div>
         </div>

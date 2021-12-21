@@ -20,6 +20,7 @@ import ScrollToPosition from './components/scripts/functions/ScrollToPosition.co
 import ShowMenu from './components/scripts/functions/ShowMenu.coffee';
 import ShowServiceDetail from './components/scripts/functions/ShowServiceDetail.coffee';
 import ShowProductDetail from './components/scripts/functions/ShowProductDetail.coffee';
+import SendMessage from './components/scripts/functions/SendMessage.coffee';
 
 // IMport custom style
 import 'aos/dist/aos.css';
@@ -86,3 +87,4 @@ const scrollToPosition = new ScrollToPosition();
 const showMenu = new ShowMenu();
 const showServiceDetail = new ShowServiceDetail();
 const showProductDetail = new ShowProductDetail();
+const sendMessage = new SendMessage();

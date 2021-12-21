@@ -22,7 +22,7 @@
 </head>
 
 
-<body class='position-relative'>
+<body class='preload position-relative'>
     <header class='fixed-top vw-100'>
         <div id="header" class='p-0 m-0 z-depth-3' data-is-on-services-section='false'></div>
     </header>
@@ -37,6 +37,25 @@
         <div id="contactUs" class='blue'></div>
         <div id="footer"></div>
     </footer>
+    <div class="modal fade" id="modalWarning" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+        aria-hidden="true" style="z-index:2000;">
+        <div class="modal-dialog modal-full-height modal-bottom  modal-notify modal-warning" role="document">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <p class="heading lead text-center">Warning</p>
+                </div>
+                <div class="modal-body">
+                    <div class="text-center">
+                        <i class="fas fa-times fa-4x mb-3 animated rotateIn"></i>
+                        <div id='modalWatning-content'></div>
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <a id='modalWarning-dismiss' type="button" class="btn btn-warning w-50" data-dismiss="modal">OK</a>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- JQuery -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.13.0-rc.3/jquery-ui.min.js"
@@ -52,6 +71,26 @@
         src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
     <script type="module" src="../main.js"></script>
     <script type='text/javascript' src='/plugins/Smooth-Card-Carousel-jQuery-CSS3/scripts.js'></script>
+    <script type='text/javascript'>
+        $(document).ready(function () {
+
+            if (window.location.hash) {
+                window.location = ""
+            }
+
+            $('body').removeClass('preload');
+            window.onhashchange = () => {
+                let hash = window.location.hash
+                if (hash == "#notify") {
+                    $("#modalWarning").modal("show")
+                    $("#modalWarning-dismiss").on("click", () => {
+                        history.replaceState(null, null, ' ');
+                    })
+                }
+            }
+        })
+
+    </script>
 </body>
 
 </html>
