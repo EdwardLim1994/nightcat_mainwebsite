@@ -64,6 +64,7 @@ export default class Header
             {
                 type: "multi",
                 title: "policy",
+                link: "#policy",
                 menu: [
                     {
                         type: "single",
@@ -151,7 +152,7 @@ export default class Header
 
     renderMultiMenu: (items) ->
         return "
-            <a class='text-center px-5 py-3 px-md-4 py-md-2 dropdown-toggle text-capitalize button__headerMenu' type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>#{items.title}</a> 
+            <a class='text-center px-5 py-3 px-md-4 py-md-2 dropdown-toggle text-capitalize button__headerMenu' type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false' id='#{(items.link).replace("#", "")}-menuBtn'>#{items.title}</a> 
             <div class='dropdown-menu #{if window.innerWidth <= 720 then "vw-100"}'>
                 #{        
                     (items.menu).map((item) -> 

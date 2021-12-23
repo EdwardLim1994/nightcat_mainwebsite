@@ -19,7 +19,7 @@ export default class Testimonial
                 solution: "Provides Attedance System to customer , to auto calculate work time , ot time and others."
             },
             {
-                img: "/images/testimonial/portfolio-2.jpg"
+                img: "/images/testimonial/portfolio-10.jpg"
                 alt: ""
                 company: "GOODLY ENTERPRISE",
                 howToFind: "Facebook",
@@ -51,7 +51,7 @@ export default class Testimonial
                 solution: "Allow customer to create invoice , record payment , substract the balance and show the outstanding , and allow annual sales."
             },
             {
-                img: "/images/testimonial/portfolio-5.jpg"
+                img: "/images/testimonial/portfolio-4.jpg"
                 alt: ""
                 company: "TANG MART",
                 howToFind: "Referred by Friends",

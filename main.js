@@ -74,7 +74,7 @@ if (window.innerWidth > 720) {
 	$('#testimonials').html(testimonials.renderMobile());
 }
 
-$('#home').html(carousel.render());
+$('#home').html(home.render());
 $('#services').html(services.render());
 $('#aboutUs').html(aboutUs.render());
 $('#partners').html(partners.render());

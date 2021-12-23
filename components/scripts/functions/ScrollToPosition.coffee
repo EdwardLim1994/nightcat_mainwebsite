@@ -8,9 +8,13 @@ export default class ScrollToPosition
         @header = new Header
         @headerMenu = @header.headerMenu
         @scrollToContactBtn = $(".contactBtn__scrollToContact")
+        @scrollToTestiminialLink = $(".scroll-to-testimonial-link")
         @scrollToTopBtn = $("#scroll-to-top-btn")
         @headerMenuBtn = $("#header-menu-btn")
         @headerMenuBody = $("#header-menu-body")
+        @homeMenuBtn = $("#home-menuBtn")
+        @headerContainer = $("#header")
+        @sectionIds = $('a.button__headerMenu');
         @isScrolling = false
         @scrollTimer
         @events()
@@ -20,7 +24,7 @@ export default class ScrollToPosition
         @headerMenu.forEach((headerMenu) => 
             switch headerMenu.type
                 when "single"
-                    #$("#home").addClass("menuButton--active")
+                    # @homeMenuBtn.addClass("button__headerMenu--active")
                     $("#{headerMenu.link}-menuBtn").click( =>
                         if @headerMenuBtn.length > 0
                             ChangeIcon.changeMenuIcon({
@@ -30,7 +34,7 @@ export default class ScrollToPosition
                         
                         $('html, body').animate({
                             scrollTop: $(headerMenu.link).position().top - if window.innerWidth > 720 then 50 else 0
-                        }, 1000);
+                        }, 300);
                     )
                     break
 
@@ -67,18 +71,39 @@ export default class ScrollToPosition
 
                     @scrollTimer = null
                 , 500)
+
+            # @sectionIds.each(() =>
+            #     if $(@).attr("id") is not "policy"
+            #         container = $(@).attr('href');
+            #         containerOffset = $(container).position().top;
+            #         containerHeight = $(container).outerHeight();
+            #         containerBottom = containerOffset + containerHeight;
+            #         scrollPosition = $(document).scrollTop();
+
+            #         if scrollPosition < containerBottom - 20 && scrollPosition >= containerOffset - 20
+            #             $(@).addClass('button__headerMenu--active');
+            #         else
+            #             $(@).removeClass('button__headerMenu--active');
+            # )
+            
         )
 
         @scrollToContactBtn.click(  ->
             $('html, body').animate({
                 scrollTop: $("#contactUs").position().top
-            }, 1000);
+            }, 300);
+        )
+
+        @scrollToTestiminialLink.click(  ->
+            $('html, body').animate({
+                scrollTop: $("#testimonials").position().top
+            }, 300);
         )
 
         @scrollToTopBtn.click( ->
             $('html, body').animate({
                 scrollTop: 0
-            }, 1000);
+            }, 300);
         )
 
         return
