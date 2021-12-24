@@ -99,7 +99,7 @@ export default class Header
                 <p class='text-white small p-0 m-0 mb-2 header__subtitle'>Improving Traditional Business Model and Challenge New Technology Limits</p>
             </div>
             <div class='header__menuBackground'>
-                <ul class='header__menuBody text-white d-flex flex-row justify-content-center m-0 p-0'>
+                <ul class='header__menuBody text-white d-flex flex-row justify-content-center aligh-items-center m-0 p-0'>
                     #{@headerMenu.map(((item) -> @renderMenuList(item)).bind(@)).join("")}
                 </ul>
             </div>
@@ -112,7 +112,7 @@ export default class Header
                 <h2 class='text-white text-center h2 h2-responsive text-uppercase font-weight-bold mt-1 p-2 p-0 m-0'>Nightcat Digital Solutions</h2>
             </div>
             <div class='clearfix vw-100 position-absolute fixed-top'>
-                <button id='header-menu-btn' type='button' class='d-block float-right btn btn-info rounded p-3'>
+                <button id='header-menu-btn' type='button' class='d-block float-right btn btn-info rounded p-3 mr-md-4'>
                     <i class='fas fa-bars fa-2x'></i>
                 </button>
             </div>
@@ -120,7 +120,7 @@ export default class Header
     
     renderMenu: ->
         return "
-            <div id='header-menu-body' class='header__menuInnerBody position-fixed vh-100 vw-100 m-0 p-0 blue lighten-3 d-none'>
+            <div id='header-menu-body' class='header__menuInnerBody position-fixed vh-100 vw-100 m-0 p-0 blue lighten-3 d-none overflow-auto'>
                 <ul class='header_menuBody text-white d-flex flex-column justify-content-center w-100 p-0 m-0'>
                     #{
                     # "<li class='px-5 py-3 px-md-4 py-md-2 d-flex justify-content-end'>
@@ -145,7 +145,7 @@ export default class Header
 
     renderSingleMenu: (item) ->
         return "
-            <li class='d-flex align-items-center #{if window.innerWidth <= 720 then "w-100" else ""}'>
+            <li class='d-flex align-items-center #{if window.innerWidth <= 900 then "w-100" else ""}'>
                 <a class='text-center px-5 py-3 px-md-4 py-md-2 text-capitalize button__headerMenu w-100' id='#{(item.link).replace("#", "")}-menuBtn' >#{item.title}</a>
             </li> 
         "
@@ -153,10 +153,10 @@ export default class Header
     renderMultiMenu: (items) ->
         return "
             <a class='text-center px-5 py-3 px-md-4 py-md-2 dropdown-toggle text-capitalize button__headerMenu' type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false' id='#{(items.link).replace("#", "")}-menuBtn'>#{items.title}</a> 
-            <div class='dropdown-menu #{if window.innerWidth <= 720 then "vw-100"}'>
+            <div class='dropdown-menu #{if window.innerWidth <= 900 then "vw-100"}'>
                 #{        
                     (items.menu).map((item) -> 
-                        return "<a class='dropdown-item' >#{item.title}</a>"
+                        return "<a class='dropdown-item text-capitalize button__headerMenu--policy' href='#{item.link}' id='#{(item.link).replace("#", "")}-menuBtn'>#{item.title}</a>"
                     ).join("")
                 }
             </div>

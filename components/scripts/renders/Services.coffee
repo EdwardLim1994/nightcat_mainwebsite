@@ -74,7 +74,7 @@ export default class Services
                         <p class='text-white text-center services__description'>#{service.description}</p>
                     </div>
                 </div>   
-                <img class='services__img img-fluid #{if window.innerWidth > 720 then "w-100 h-100" else "vw-100"}' src='#{service.img}' />
+                <img class='services__img img-fluid #{if window.innerWidth > 900 then "w-100 h-100" else "vw-100"}' src='#{service.img}' />
                 <div class='services__mask mask flex-center waves-effect waves-light'>
                 </div>
             </div>

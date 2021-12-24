@@ -17,7 +17,7 @@ export default class ContactUs
                 #{SectionHeader.renderSectionTitle(@sectionTitleComponent)}
                 <div class='row d-flex'>
                     <div class='order-2 order-md-1 col-12 col-md-6 border-right'>
-                        <a class='' href='tel:+6 0126113810'>
+                        <a class='text-light' class='' href='tel:+6 0126113810'>
                             <div class='row'>
                                 <div class='col-2 text-right'>
                                     <i class='fas fa-phone'></i>
@@ -28,7 +28,7 @@ export default class ContactUs
                                 
                             </div>
                         </a>
-                        <a class='' href='mailto:nightcatdigitalsolutions@gmail.com'>
+                        <a class='text-light' class='' href='mailto:nightcatdigitalsolutions@gmail.com'>
                             <div class='row'>
                                 <div class='col-2 text-right'>
                                     <i class='fas fa-envelope'></i>
@@ -39,7 +39,7 @@ export default class ContactUs
                                 
                             </div>
                         </a>
-                        <a class='' href='https://goo.gl/maps/xZYSd7R3XFdonxJ17'>
+                        <a class='text-light' class='' href='https://goo.gl/maps/xZYSd7R3XFdonxJ17'>
                             <div class='row'>
                                 <div class='col-2 text-right'>
                                     <i class='fas fa-map-marker-alt'></i>

@@ -14,6 +14,7 @@ import Testimonial from './components/scripts/renders/Testimonial.coffee';
 import Partner from './components/scripts/renders/Partner.coffee';
 import ContactUs from './components/scripts/renders/ContactUs.coffee';
 import Footer from './components/scripts/renders/Footer.coffee';
+import Policy from './components/scripts/renders/Policy.coffee';
 import ScrollToTopBtn from './components/scripts/blocks/ScrollToTopBtn.coffee';
 
 import ScrollToPosition from './components/scripts/functions/ScrollToPosition.coffee';
@@ -21,6 +22,7 @@ import ShowMenu from './components/scripts/functions/ShowMenu.coffee';
 import ShowServiceDetail from './components/scripts/functions/ShowServiceDetail.coffee';
 import ShowProductDetail from './components/scripts/functions/ShowProductDetail.coffee';
 import SendMessage from './components/scripts/functions/SendMessage.coffee';
+import SwitchPage from './components/scripts/functions/SwitchPage.coffee';
 
 // IMport custom style
 import 'aos/dist/aos.css';
@@ -40,6 +42,7 @@ const testimonials = new Testimonial();
 const partners = new Partner();
 const contactUs = new ContactUs();
 const footer = new Footer();
+const policy = new Policy();
 
 // Set latest year on copyright notice
 $('#latestYear').text(new Date().getFullYear());
@@ -59,14 +62,16 @@ $('#whatsapp-link').on('click', function () {
 	}
 });
 
-if (window.innerWidth > 720) {
+if (window.innerWidth > 900) {
 	$('#home').css('margin-top', '10rem');
+	$('#policyContainer').html(policy.render()).css('margin-top', '15rem');
 	$('#header').html(header.render());
 	$('#products').html(products.render());
 	$('#ourTeam').html(ourTeam.render());
 	$('#testimonials').html(testimonials.render());
 } else {
 	$('#home').css('margin-top', '7.7rem');
+	$('#policy').html(policy.render()).css('margin-top', '8rem');
 	$('#header').html(header.renderMobile());
 	$(header.renderMenu()).insertBefore('header');
 	$('#products').html(products.renderMobile());
@@ -83,8 +88,9 @@ $('#footer').html(footer.render());
 
 $(ScrollToTopBtn.generateScrollToTopBtn()).insertAfter('footer');
 
-const scrollToPosition = new ScrollToPosition();
 const showMenu = new ShowMenu();
 const showServiceDetail = new ShowServiceDetail();
 const showProductDetail = new ShowProductDetail();
 const sendMessage = new SendMessage();
+const switchPage = new SwitchPage();
+const scrollToPosition = new ScrollToPosition();

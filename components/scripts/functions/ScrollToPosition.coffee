@@ -2,6 +2,7 @@ import $ from "jquery"
 
 import Header from "../renders/Header.coffee"
 import ChangeIcon from "./helpers/ChangeIcon.coffee"
+import ResponsiveHeader from "./helpers/ResponsiveHeader.coffee"
 
 export default class ScrollToPosition
     constructor: ->
@@ -15,6 +16,7 @@ export default class ScrollToPosition
         @homeMenuBtn = $("#home-menuBtn")
         @headerContainer = $("#header")
         @sectionIds = $('a.button__headerMenu');
+        @policySubmenu = $(".button__headerMenu--policy")
         @isScrolling = false
         @scrollTimer
         @events()
@@ -33,7 +35,7 @@ export default class ScrollToPosition
                             })
                         
                         $('html, body').animate({
-                            scrollTop: $(headerMenu.link).position().top - if window.innerWidth > 720 then 50 else 0
+                            scrollTop: $(headerMenu.link).position().top - if window.innerWidth > 900 then 50 else 0
                         }, 300);
                     )
                     break
@@ -45,29 +47,17 @@ export default class ScrollToPosition
         $(window).scroll(() =>
             if not @scrollTimer
                 @scrollTimer = setTimeout(() =>
-                    if $(document).scrollTop() >= ($("#services").position().top - if window.innerWidth > 720 then 50 else 0) and $("#header").data('is-on-services-section') is false
-                        $(".header__logo").addClass("header__logo--hidden")
-                        $(".header__subtitle").addClass("header__subtitle--hidden")
-                        $("#header").attr('data-is-on-services-section', true)
+                    if $(document).scrollTop() >= (if window.innerWidth > 900 then 604 else 554) and $("#header").data('is-on-services-section') is false
+                        ResponsiveHeader.hideLogoSubtitle()
                         @scrollToTopBtn.animate({
                             right: "0"
                         }, 500)
-                        setTimeout(() =>
-                            $(".header__logo").addClass("d-none")
-                            return
-                        , 400)
 
                     else
-                        $(".header__logo").removeClass("d-none")
-                        $(".header__subtitle").removeClass("header__subtitle--hidden")
-                        setTimeout(() =>
-                            $("#header").attr('data-is-on-services-section', false)
-                            $(".header__logo").removeClass("header__logo--hidden")
-                            @scrollToTopBtn.animate({
-                                right: "-5rem"
-                            }, 1000)
-                            return
-                        , 100)
+                        ResponsiveHeader.showLogoSubtitle()
+                        @scrollToTopBtn.animate({
+                            right: "-5rem"
+                        }, 1000)
 
                     @scrollTimer = null
                 , 500)
@@ -88,22 +78,27 @@ export default class ScrollToPosition
             
         )
 
-        @scrollToContactBtn.click(  ->
-            $('html, body').animate({
-                scrollTop: $("#contactUs").position().top
-            }, 300);
+        @scrollToContactBtn.click(() =>
+            @scrollFunction($("#contactUs").position().top)
+            $("#contactName").focus()
         )
 
-        @scrollToTestiminialLink.click(  ->
-            $('html, body').animate({
-                scrollTop: $("#testimonials").position().top
-            }, 300);
+        @scrollToTestiminialLink.click(() =>
+            @scrollFunction($("#testimonials .container-fluid").position().top)
         )
 
-        @scrollToTopBtn.click( ->
-            $('html, body').animate({
-                scrollTop: 0
-            }, 300);
+        @scrollToTopBtn.click(() =>
+            $("input").focusout()
+            @scrollFunction(0)
+        )
+
+        @policySubmenu.click((e) =>
+            @scrollFunction(0)
         )
 
         return
+
+    scrollFunction: (position) ->
+        $('html, body').animate({
+            scrollTop: position
+        }, 300);

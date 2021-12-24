@@ -24,15 +24,18 @@
 
 <body class='preload position-relative'>
     <header class='fixed-top vw-100'>
-        <div id="header" class='p-0 m-0 z-depth-3' data-is-on-services-section='false'></div>
+        <div id="header" class='p-0 m-0 z-depth-3' data-active-menu='' data-is-on-services-section='false'></div>
     </header>
-    <div id="home"></div>
-    <div id="services"></div>
-    <div id="products" class="blue lighten-3"></div>
-    <div id="aboutUs"></div>
-    <div id="ourTeam" class="blue lighten-3"></div>
-    <div id="testimonials"></div>
-    <div id="partners" class="blue lighten-3"></div>
+    <div id='mainBody'>
+        <div id="home"></div>
+        <div id="services"></div>
+        <div id="products" class="blue lighten-3"></div>
+        <div id="aboutUs"></div>
+        <div id="ourTeam" class="blue lighten-3"></div>
+        <div id="testimonials"></div>
+        <div id="partners" class="blue lighten-3"></div>
+    </div>
+    <div id='policyContainer' class='d-none'></div>
     <footer class='page-footer'>
         <div id="contactUs" class='blue'></div>
         <div id="footer"></div>
@@ -73,9 +76,8 @@
     <script type='text/javascript' src='/plugins/Smooth-Card-Carousel-jQuery-CSS3/scripts.js'></script>
     <script type='text/javascript'>
         $(document).ready(function () {
-
             if (window.location.hash) {
-                window.location = ""
+                history.replaceState(null, null, ' ');
             }
 
             $('body').removeClass('preload');

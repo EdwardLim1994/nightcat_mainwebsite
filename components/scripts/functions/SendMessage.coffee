@@ -20,12 +20,12 @@ export default class SendMessage
         $.each(@products.products, (i, product) =>
             if window.outerWidth < @screenWidth
                 $("##{product.id}").click({messege: product.message}, (e)-> 
-                    window.location = e.datamessege.mobile
+                    window.location = e.data.messege.mobile
                 )    
             
             else
                 $("##{product.id}").click({messege: product.message}, (e)-> 
-                    window.location = e.datamessege.desktop
+                    window.location = e.data.messege.desktop
                 )  
         )
 

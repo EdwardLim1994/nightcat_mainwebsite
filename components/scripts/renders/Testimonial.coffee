@@ -9,6 +9,8 @@ export default class Testimonial
             subtitle: "What our customers say"
             background: "light"
         }
+
+        # only accept odd number of total company count otherwise the style will be off. Currently it is 5 companies
         @testimonials = [
             {
                 img: "/images/testimonial/portfolio-1.jpg"
@@ -115,7 +117,7 @@ export default class Testimonial
 
     generateTestimonialBody: (testimonial) ->
         return "
-            #{if window.innerWidth <= 720 then "<div class='col-12 pb-5 pb-md-0'>" else "<div class='my-card py-2'>"}
+            #{if window.innerWidth <= 900 then "<div class='col-12 pb-5 pb-md-0'>" else "<div class='my-card py-2'>"}
                 <div class='card'>
                     <img class='card-img-top w-100 h-100 p-0 m-0' src='#{testimonial.img}' alt='Card image cap'>
                     <div class='card-body p-0 m-0'>

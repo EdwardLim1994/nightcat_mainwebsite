@@ -12,6 +12,6 @@ export default class SectionHeader
                         when "light" then "text-black"
                     }'>
                 <h2 class='text-center h2 h2-responsive text-uppercase'  #{if component.background is "dark" then "style='text-shadow: 1px 1px rgba(0, 0, 0, 0.2)'"}>#{component.title}</h2>
-                #{if window.innerWidth > 720 then "<p class='text-center'>#{component.subtitle}</p>" else ""}
+                #{if window.innerWidth > 900 then "<p class='text-center'>#{component.subtitle}</p>" else ""}
             </div>
         "

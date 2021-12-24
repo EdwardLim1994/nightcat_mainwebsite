@@ -109,11 +109,15 @@ export default class OurTeam
                     <span class='sr-only'>Next</span>
                 </a>
             </div>
+            #{ScrollToContactUsBtn.render({
+                id: "join-btn",
+                title: "Want to join us?"
+            })}
         "
 
     generateTeamBlock: (teamMember) ->
         return "
-            #{if window.innerWidth <= 720 then "<div class='col-12 pb-5 pb-md-0'>" else ""}
+            #{if window.innerWidth <= 900 then "<div class='col-12 pb-5 pb-md-0'>" else ""}
                 <div class='card hoverable'>
                     <div class='mx-auto mt-1 mt-md-2 py-3'>
                         <img class='img-thumbnail rounded-circle teamMember__thumbnail' src='#{teamMember.img}' alt='#{teamMember.name} Thumbnail'>
@@ -126,5 +130,5 @@ export default class OurTeam
                         <p class='card-text'>#{teamMember.description}</p>
                     </div>
                 </div>
-            #{if window.innerWidth <= 720 then "</div>" else ""}
+            #{if window.innerWidth <= 900 then "</div>" else ""}
         "
