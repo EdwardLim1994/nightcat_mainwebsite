@@ -13,7 +13,7 @@ export default class Testimonial
         # only accept odd number of total company count otherwise the style will be off. Currently it is 5 companies
         @testimonials = [
             {
-                img: "/images/testimonial/portfolio-1.jpg"
+                img: "./images/portfolio-1.jpg"
                 alt: ""
                 company: "PAKAR MATA EVER EYES",
                 howToFind: "Call Us",
@@ -21,7 +21,7 @@ export default class Testimonial
                 solution: "Provides Attedance System to customer , to auto calculate work time , ot time and others."
             },
             {
-                img: "/images/testimonial/portfolio-10.jpg"
+                img: "./images/portfolio-10.jpg"
                 alt: ""
                 company: "GOODLY ENTERPRISE",
                 howToFind: "Facebook",
@@ -37,7 +37,7 @@ export default class Testimonial
             #     solution: "Help client set up and mantain shop in <a href='https://shopee.com.my/zsontrading'>Shopee</a> and <a href='https://www.lazada.com.my/shop/zsontrading/'>Lazada</a> , allowing customer to focus on selling products"
             # },
             {
-                img: "/images/testimonial/portfolio-3.jpg"
+                img: "./images/portfolio-3.jpg"
                 alt: ""
                 company: "XIM SDN BHD",
                 howToFind: "Whatsapp Us",
@@ -45,7 +45,7 @@ export default class Testimonial
                 solution: "Helps them to combine all the quotation into database , allow them to search by key word together with pictures and unit cost."
             },
             {
-                img: "/images/testimonial/portfolio-4.jpg"
+                img: "./images/portfolio-4.jpg"
                 alt: ""
                 company: "RIQQA ENTERPRISE",
                 howToFind: "Website",
@@ -53,7 +53,7 @@ export default class Testimonial
                 solution: "Allow customer to create invoice , record payment , substract the balance and show the outstanding , and allow annual sales."
             },
             {
-                img: "/images/testimonial/portfolio-4.jpg"
+                img: "./images/portfolio-4.jpg"
                 alt: ""
                 company: "TANG MART",
                 howToFind: "Referred by Friends",

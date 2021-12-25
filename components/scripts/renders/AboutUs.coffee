@@ -16,7 +16,7 @@ export default class AboutUs
             <div class='row p-0 m-0 blue-grey lighten-5 d-flex'>
                 <div class='order-1 order-md-1 col-12 col-md-6 p-0 m-0'>
                     <div class='view zoom'>
-                        <img class='img-fluid w-100' src='/images/aboutus/about-2.jpg' />
+                        <img class='img-fluid w-100' src='./images/about-2.jpg' />
                     </div>
                 </div>
                 <div class='order-2 order-md-2 col-12 col-md-6 p-0 m-0' data-aos='zoom-in'>
@@ -28,7 +28,7 @@ export default class AboutUs
                 </div>
                 <div class='order-3 order-md-4 col-12 col-md-6 p-0 m-0'>
                     <div class='view zoom'>
-                        <img class='img-fluid w-100' src='/images/aboutus/about-1.jpg' />
+                        <img class='img-fluid w-100' src='./images/about-1.jpg' />
                     </div>
                 </div>
             </div>

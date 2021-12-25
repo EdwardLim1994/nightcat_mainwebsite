@@ -9,8 +9,8 @@ export default class Home
         return "
         <div class='view'>
             <picture>
-                <source media='(max-width: 760px)' srcset='/images/home/home-mobile.jpg'>
-                <img src='/images/home/home-desktop.jpg' class='w-100' alt='home image' />
+                <source media='(max-width: 760px)' srcset='./images/home-mobile.jpg'>
+                <img src='./images/home-desktop.jpg' class='w-100' alt='home image' />
             </picture>
             <div class='mask flex-center waves-effect waves-light rgba-black-light'>
                 <div class='d-flex flex-column justify-content-center home__container'>

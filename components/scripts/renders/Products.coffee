@@ -15,7 +15,7 @@ export default class Products
                 name: "hotlink",
                 price: "RM45.00",
                 sold: "25"
-                img: "/images/products/hotlink.jpg"
+                img: "./images/hotlink.jpg"
                 message: {
                     mobile: "https://wa.me/+60126113810?text=I am interested in HOTLINK with price RM 45.00",
                     desktop: "https://web.whatsapp.com/send?phone=%2B60126113810&text=I+am+interested+in+Hotlink+with+price+RM+45.00&app_absent=0"
@@ -34,7 +34,7 @@ export default class Products
                 name: "celcom",
                 price: "RM45.00",
                 sold: "25"
-                img: "/images/products/celcom.jpg"
+                img: "./images/celcom.jpg"
                 message: {
                     mobile: "https://wa.me/+60126113810?text=I am interested in CELCOM with price RM 45.00",
                     desktop: "https://web.whatsapp.com/send?phone=%2B60126113810&text=I+am+interested+in+Celcom+with+price+RM+45.00&app_absent=0"
@@ -53,7 +53,7 @@ export default class Products
                 name: "u mobile",
                 price: "RM68.00",
                 sold: "25"
-                img: "/images/products/umobile.jpg"
+                img: "./images/umobile.jpg"
                 message: {
                     mobile: "",
                     desktop: ""
@@ -74,7 +74,7 @@ export default class Products
                 name: "u mobile",
                 price: "RM40.00",
                 sold: "25"
-                img: "/images/products/umobile.jpg"
+                img: "./images/umobile.jpg"
                 message: {
                     mobile: "https://wa.me/+60126113810?text=I am interested in UMOBILE with price RM 40.00",
                     desktop: "https://web.whatsapp.com/send?phone=%2B60126113810&text=I+am+interested+in+Umobile+with+price+RM+40.00&app_absent=0"

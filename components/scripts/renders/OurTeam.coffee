@@ -14,35 +14,35 @@ export default class OurTeam
                 name: "Hock Chai",
                 title: "Founder",
                 description: "Hock Chai is the Founder and Nightcat Digital Solutions, which he started in 2013. During the company’s early years, Hock Chai acted as the sole engineer, designer, and support representative for the entire Nightcat Eco System. In addition to running the company and setting overall product strategy, he remains actively involved in many departments of the company that he had previously run himself.",
-                img: "/images/ourteam/hock_chai.jpg",
+                img: "./images/hock_chai.jpg",
                 position: "top"
             },
             {
                 name: "Kim Yok",
                 title: "Co-Founder",
                 description: "Kim Yok is our recruiter and works alongside the human resources department. Also a Bookkeeper of the house. Nothing gets passed her without her agreement. Monitoring the well-being of staff and achieving financial objectives are key roles. You might not see her so much on site as she is busy with loads of paperwork.",
-                img: "/images/ourteam/kim_yok.jpg",
+                img: "./images/kim_yok.jpg",
                 position: "top"
             },
             {
                 name: "Jack Son",
                 title: "Backend Design",
                 description: "Jack Son is passionate about building products people love. Previously involve in various IT fields , including Software and Hardware , he brings 15 years of experience in engineering & design to help clients come out with effective and stable solutions. He holds a Bachelor of Science in Computer Science from College Tunku Abdul Rahman.",
-                img: "/images/ourteam/t3.jpg",
+                img: "./images/t3.jpg",
                 position: "bottom"
             },
             {
                 name: "Shafie",
                 title: "Frontend Developer",
                 description: "Shafie is passionate about coding and love to troubleshoot problems regarding software or hardware. Interest in IT development that can help in future coding experiences and knowledges. A graduate from Universiti Tun Hussein Onn Malaysia that hold Bachelor Degreee in Computer Science (Software Engineering).",
-                img: "/images/ourteam/t4.jpg",
+                img: "./images/t4.jpg",
                 position: "bottom"
             },
             {
                 name: "Jean Mean",
                 title: "Admin",
                 description: "Jean Mean is the Administrative Officer and General Counsel at Nightcat, where she oversees the company’s administrative functions, finance , legal, compliance and government affairs. She ensures that everything is in order so that other team members can focus on essential technology.",
-                img: "/images/ourteam/jean_mean.jpg",
+                img: "./images/jean_mean.jpg",
                 position: "bottom"
             },
         ]

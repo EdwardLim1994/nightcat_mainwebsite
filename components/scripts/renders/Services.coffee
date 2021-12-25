@@ -11,42 +11,42 @@ export default class Services
         }
         @services = [
             {
-                img: "/images/services/report.jpg",
+                img: "./images/report.jpg",
                 title: "Reporting",
                 description: "Helps employers consolidate report form various branch",
             },
             {
-                img: "/images/services/attendance.jpg",
+                img: "./images/attendance.jpg",
                 title: "Attendance",
                 description: "Helps employers to track employee working time and perform automated, salary calculation",
             },
             {
-                img: "/images/services/ecommerce.jpg",
+                img: "./images/ecommerce.jpg",
                 title: "Ecommerce",
                 description: "Allow customer to see order products, able to show picture / cost, add into cart, and integrate with payment gateway",
             },
             {
-                img: "/images/services/website.jpg",
+                img: "./images/website.jpg",
                 title: "Website",
                 description: "Build customised website for customer, depending on their sector and needs",
             },
             {
-                img: "/images/services/bot.jpg",
+                img: "./images/bot.jpg",
                 title: "Chat AutoReply BOT",
                 description: "Create bot (facebook, whatsapp and others) to auto reply customer various enquiries",
             },
             {
-                img: "/images/services/pos.jpg",
+                img: "./images/pos.jpg",
                 title: "Point Of Sales",
                 description: "Aid employers in selling products, inventory control, record customer payment and allow them to have a more firm grasp on their business profits",
             },
             {
-                img: "/images/services/payment.jpg",
+                img: "./images/payment.jpg",
                 title: "Payment Gateway",
                 description: "Allow integration with various payment gateway, eg ipay88, fpx, etc",
             },
             {
-                img: "/images/services/seo.jpg",
+                img: "./images/seo.jpg",
                 title: "Search Engine Optimzation",
                 description: "Allow search engine to crawl websites more effectively, resulting in better ranking in searches",
             }

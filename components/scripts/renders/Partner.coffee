@@ -10,12 +10,12 @@ export default class Partner
         }
         @partners = [
             {
-                img: "/images/partner/autocount.png"
+                img: "./images/autocount.png"
                 alt: "Autocount Soft"
                 link: "https://www.autocountsoft.com/",
             },
             {
-                img: "/images/partner/mypoint_marketing.png"
+                img: "./images/mypoint_marketing.png"
                 alt: "My Point Marketing - IRS POS System Software"
                 link: "https://www.irspossystem.com/?gclid=EAIaIQobChMIj9-61__L9AIVQUUrCh2szAB2EAAYASAAEgIQCvD_BwE",
             }
