@@ -8,7 +8,7 @@ export default class ResponsiveHeader
         $(".header__logo").removeClass("d-none")
         $(".header__subtitle").removeClass("header__subtitle--hidden")
         setTimeout(() =>
-            $("#header").attr('data-is-on-services-section', false)
+            #$("#header").attr('data-is-on-services-section', false)
             $(".header__logo").removeClass("header__logo--hidden")
             return
         , 100)
@@ -16,7 +16,7 @@ export default class ResponsiveHeader
     @hideLogoSubtitle: ->
         $(".header__logo").addClass("header__logo--hidden")
         $(".header__subtitle").addClass("header__subtitle--hidden")
-        $("#header").attr('data-is-on-services-section', true)
+        #$("#header").attr('data-is-on-services-section', true)
         setTimeout(() =>
             if window.innerWidth > 900 then $(".header__logo").addClass("d-none")
             return

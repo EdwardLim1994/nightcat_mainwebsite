@@ -47,16 +47,16 @@ export default class ScrollToPosition
         $(window).scroll(() =>
             if not @scrollTimer
                 @scrollTimer = setTimeout(() =>
-                    if $(document).scrollTop() >= (if window.innerWidth > 900 then 604 else 554) and $("#header").data('is-on-services-section') is false
+                    if $(document).scrollTop() >= (if window.innerWidth > 900 then 604 else 554)
                         ResponsiveHeader.hideLogoSubtitle()
                         @scrollToTopBtn.animate({
-                            right: "0"
+                            opacity: 1
                         }, 500)
 
                     else
                         ResponsiveHeader.showLogoSubtitle()
                         @scrollToTopBtn.animate({
-                            right: "-5rem"
+                            opacity: 0
                         }, 1000)
 
                     @scrollTimer = null

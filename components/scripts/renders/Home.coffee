@@ -14,9 +14,9 @@ export default class Home
             </picture>
             <div class='mask flex-center waves-effect waves-light rgba-black-light'>
                 <div class='d-flex flex-column justify-content-center home__container'>
-                    <h2 class='white-text pb-4 h2 h2-responsive font-weight-lighter'>Help clients to define <span class='font-weight-bold'>new business objectives</span> and provide <span class='font-weight-bold'>professional services and products</span>.</h2>
-                    <h5 class='white-text pb-2 h5 h5-responsive'>Feeling interest? </h5>
-                    <div class='home__button'>
+                    <h2 data-aos='fade-right' class='white-text pb-4 h2 h2-responsive font-weight-lighter'>Help clients to define <span class='font-weight-bold'>new business objectives</span> and provide <span class='font-weight-bold'>professional services and products</span>.</h2>
+                    <h5 data-aos='fade-right' class='white-text pb-2 h5 h5-responsive'>Feeling interest? </h5>
+                    <div data-aos='fade-right' class='home__button'>
                         #{ScrollToContactUsBtn.render({
                             title: "Contact us Now"
                             rounder: true

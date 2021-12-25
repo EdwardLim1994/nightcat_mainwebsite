@@ -70,7 +70,7 @@ export default class Testimonial
                 <div class='pb-5 d-flex align-items-center justify-content-center w-100'>
                     <div class='d-flex align-items-center justify-content-center flex-column w-100 overflow-hidden position-relative '>
                         <div class='card-carousel'>
-                            #{@testimonials.map((testimonial) => @generateTestimonialBody(testimonial)).join("")}
+                            #{@testimonials.map((testimonial, key) => @generateTestimonialBody(testimonial, key)).join("")}
                         </div>
                     </div>
                 </div>
@@ -96,7 +96,7 @@ export default class Testimonial
                     #{@testimonials.map((testimonial, key) => 
                         return "
                         <div class='carousel-item #{if key is 0 then "active"}'>
-                            #{@generateTestimonialBody(testimonial)}
+                            #{@generateTestimonialBody(testimonial, key)}
                         </div>
                         "
                     ).join("")}
@@ -115,10 +115,10 @@ export default class Testimonial
             })}
         "
 
-    generateTestimonialBody: (testimonial) ->
+    generateTestimonialBody: (testimonial, offset) ->
         return "
             #{if window.innerWidth <= 900 then "<div class='col-12 pb-5 pb-md-0'>" else "<div class='my-card py-2'>"}
-                <div class='card'>
+                <div class='card' data-aos='zoom-in' data-aos-delay='#{offset * 100}'>
                     <img class='card-img-top w-100 h-100 p-0 m-0' src='#{testimonial.img}' alt='Card image cap'>
                     <div class='card-body p-0 m-0'>
                         <h4 class='card-title pt-3 text-center'>#{testimonial.company}</h4>

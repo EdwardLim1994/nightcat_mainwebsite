@@ -943,7 +943,7 @@ export default class Policy
                     </div>
                     <div id='#{id.toLowerCase()}-body' class='collapse' aria-labelledby='#{id.toLowerCase()}-heading'
                         data-parent='#policyBody'>
-                        <div class='card-body'>
+                        <div class='card-body text-justify'>
                             #{rule.description}
                         </div>
                     </div>

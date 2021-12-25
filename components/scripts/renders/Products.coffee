@@ -97,7 +97,7 @@ export default class Products
             #{SectionHeader.renderSectionTitle(@sectionTitleComponent)}
             <div class='container pb-5'>
                 <div class='row'>
-                    #{@products.map((product) => @renderCardsContainer(product) ).join("")}
+                    #{@products.map((product, key) => @renderCardsContainer(product, key) ).join("")}
                 </div>
             </div>
         "
@@ -118,7 +118,7 @@ export default class Products
                     #{@products.map((product, key) => 
                         return "
                         <div class='carousel-item #{if key is 0 then "active"}'>
-                            #{@renderCardsContainer(product)}
+                            #{@renderCardsContainer(product, key)}
                         </div>
                         "
                     ).join("")}
@@ -134,10 +134,10 @@ export default class Products
             </div>
         "
 
-    renderCardsContainer: (product) ->
+    renderCardsContainer: (product, offset) ->
         return "
         <div class='col-12 col-md-3 pb-5 pb-md-0'>
-            <div class='product card hoverable'>
+            <div class='product card hoverable' data-aos='flip-right' data-aos-delay='#{offset * 100}'>
                 <div class='blue card-header text-uppercase text-center text-white'>#{product.name}</div>
                 <img class='product__img card-img-top mx-auto p-3' src='#{product.img}' alt='#{product.name} image'>
                 <a class='product__detailBtn blue lighten-2 hoverable w-100 text-center text-white d-flex flex-column py-2'>

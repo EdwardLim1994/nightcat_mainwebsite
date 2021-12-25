@@ -59,15 +59,15 @@ export default class Services
             #{SectionHeader.renderSectionTitle(@sectionTitleComponent)}
             <div class='blue'>
                 <div class='row p-0 m-0'>
-                    #{@services.map(((service) => @generateServiceBlock(service)).bind(@)).join("")}
+                    #{@services.map(((service, key) => @generateServiceBlock(service, key)).bind(@)).join("")}
                 </div>
             </div>
         "
 
-    generateServiceBlock: (service) ->
+    generateServiceBlock: (service, offset) ->
 
         return "
-            <div class='services view zoom position-relative col-12 col-md-3 p-0 m-0'>
+            <div class='services view zoom position-relative col-12 col-md-3 p-0 m-0' data-aos='flip-left' data-aos-delay='#{offset * 100}'>
                 <div class='services__body position-absolute w-100 d-flex flex-column align-items-center justify-content-end'>
                     <div class='services__textContainer w-100 h-100 px-3'>
                         <h5 class='w-100 h-20 white-text text-center p-0 m-0 my-4 h4 h4-responsive'>#{service.title}</h5>

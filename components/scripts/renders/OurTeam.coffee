@@ -54,19 +54,19 @@ export default class OurTeam
             <div class='container'>
                 <div class='row'>
                 #{
-                    @teamMembers.map((member) => 
+                    @teamMembers.map((member, key) => 
                         switch member.position
                             when "top"
                                 return "
                                     <div class='col-6 p-0 px-5 my-5 d-flex flex-wrap'>
-                                        #{@generateTeamBlock(member)}
+                                        #{@generateTeamBlock(member, key)}
                                     </div>
                                 "
 
                             when "bottom"
                                 return "
                                     <div class='col-4 p-0 px-3 my-5 d-flex flex-wrap'>
-                                        #{@generateTeamBlock(member)}
+                                        #{@generateTeamBlock(member, key)}
                                     </div>
                                 "
                     ).join("")
@@ -95,7 +95,7 @@ export default class OurTeam
                     #{@teamMembers.map((member, key) => 
                         return "
                         <div class='carousel-item #{if key is 0 then "active"}'>
-                            #{@generateTeamBlock(member)}
+                            #{@generateTeamBlock(member, key)}
                         </div>
                         "
                     ).join("")}
@@ -115,10 +115,10 @@ export default class OurTeam
             })}
         "
 
-    generateTeamBlock: (teamMember) ->
+    generateTeamBlock: (teamMember, offset) ->
         return "
             #{if window.innerWidth <= 900 then "<div class='col-12 pb-5 pb-md-0'>" else ""}
-                <div class='card hoverable'>
+                <div class='card hoverable' data-aos='fade-up' data-aos-delay='#{offset * 100}'>
                     <div class='mx-auto mt-1 mt-md-2 py-3'>
                         <img class='img-thumbnail rounded-circle teamMember__thumbnail' src='#{teamMember.img}' alt='#{teamMember.name} Thumbnail'>
                     </div>
