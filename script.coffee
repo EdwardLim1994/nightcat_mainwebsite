@@ -110,7 +110,7 @@ if (window.innerWidth > 900)
 	$('#testimonials').html(testimonials.render())
 else 
 	$('#home').css('margin-top', '7.7rem')
-	$('#policy').html(policy.render()).css('margin-top', '8rem')
+	$('#policyContainer').html(policy.render()).css('margin-top', '7.5rem')
 	$('#header').html(header.renderMobile())
 	$(header.renderMenu()).insertBefore('header')
 	$('#products').html(products.renderMobile())

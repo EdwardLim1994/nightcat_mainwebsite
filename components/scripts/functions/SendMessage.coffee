@@ -63,9 +63,10 @@ export default class SendMessage
                     contents.push("subject")
                 if isMessageEmpty
                     contents.push("message")
+                    
                 @modalContent.empty().html("
                     <p>The following fields are required. But found empty:</p>
-                    <ul style='list-style-type: none'>
+                    <ul class='p-0 m-0' style='list-style-type: none'>
                         #{
                             contents.map((content) -> 
                                 return "<li class='font-weight-bold text-capitalize'>#{content}</li>"

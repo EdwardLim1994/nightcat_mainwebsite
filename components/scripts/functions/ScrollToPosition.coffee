@@ -50,13 +50,15 @@ export default class ScrollToPosition
                     if $(document).scrollTop() >= (if window.innerWidth > 900 then 604 else 554)
                         ResponsiveHeader.hideLogoSubtitle()
                         @scrollToTopBtn.animate({
-                            opacity: 1
+                            #opacity: 1
+                            right: "0"
                         }, 500)
 
                     else
                         ResponsiveHeader.showLogoSubtitle()
                         @scrollToTopBtn.animate({
-                            opacity: 0
+                            #opacity: 0
+                            right: "-5rem"
                         }, 1000)
 
                     @scrollTimer = null
