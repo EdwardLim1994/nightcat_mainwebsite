@@ -28,8 +28,6 @@ import 'aos/dist/aos.css';
 import './plugins/Smooth-Card-Carousel-jQuery-CSS3/styles.css';
 import './style.styl';
 
-AOS.init();
-
 const header = new Header();
 const home = new Home();
 const services = new Services();
@@ -92,3 +90,7 @@ const showProductDetail = new ShowProductDetail();
 const sendMessage = new SendMessage();
 const switchPage = new SwitchPage();
 const scrollToPosition = new ScrollToPosition();
+
+$(document).ready(function () {
+	AOS.init();
+});
