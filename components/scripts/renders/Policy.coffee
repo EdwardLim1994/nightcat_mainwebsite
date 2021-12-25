@@ -932,9 +932,9 @@ export default class Policy
             id = ((rule.title).replace(/[\s`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, ""))
             html += "
                 <div class='card z-depth-0 bordered'>
-                    <div class='card-header blue lighten-5 p-0 m-0 ' id='#{id.toLowerCase()}-heading'>
+                    <div class='card-header p-0 m-0 policy__header w-100' id='#{id.toLowerCase()}-heading'>
                         <h5 class='mb-0'>
-                            <button class='btn btn-link policy__btn' type='button' data-toggle='collapse' data-target='##{id.toLowerCase()}-body'
+                            <button class='btn btn-link policy__btn w-100 text-left' type='button' data-toggle='collapse' data-target='##{id.toLowerCase()}-body'
                                 aria-expanded='true' aria-controls='collapseOne'>
                                 <i class='fas fa-caret-right'></i>
                                 #{rule.title}
