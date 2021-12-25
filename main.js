@@ -1,7 +1,6 @@
 // import plugin
 import $ from 'jquery';
 import AOS from 'aos';
-import Lazyload from 'lazyload';
 
 // import custom components
 import Header from './components/scripts/renders/Header.coffee';
@@ -30,7 +29,6 @@ import './plugins/Smooth-Card-Carousel-jQuery-CSS3/styles.css';
 import './style.styl';
 
 AOS.init();
-Lazyload();
 
 const header = new Header();
 const home = new Home();
