@@ -69,8 +69,6 @@ import "./images/favicon/favicon-16x16.png"
 import "./images/favicon/favicon-32x32.png"
 import "./images/favicon/favicon.ico"
 
-AOS.init()
-
 header = new Header()
 home = new Home()
 services = new Services()
@@ -82,6 +80,7 @@ partners = new Partner()
 contactUs = new ContactUs()
 footer = new Footer()
 policy = new Policy()
+
 
 # Set latest year on copyright notice
 $('#latestYear').text(new Date().getFullYear());
@@ -133,3 +132,7 @@ showProductDetail = new ShowProductDetail()
 sendMessage = new SendMessage()
 switchPage = new SwitchPage()
 scrollToPosition = new ScrollToPosition()
+
+$(document).ready(() ->
+	AOS.init()	
+)
