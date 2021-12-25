@@ -120,7 +120,7 @@ export default class Header
     
     renderMenu: ->
         return "
-            <div id='header-menu-body' class='header__menuInnerBody position-fixed vh-100 vw-100 m-0 p-0 blue lighten-3 d-none overflow-auto'>
+            <div id='header-menu-body' class='header__menuInnerBody position-fixed vh-100 vw-100 m-0 p-0 blue lighten-3 d-none overflow-auto' style='opacity: 98%;'>
                 <ul class='header_menuBody text-white d-flex flex-column justify-content-center w-100 p-0 m-0'>
                     #{
                     # "<li class='px-5 py-3 px-md-4 py-md-2 d-flex justify-content-end'>
@@ -146,7 +146,7 @@ export default class Header
     renderSingleMenu: (item) ->
         return "
             <li class='d-flex align-items-center #{if window.innerWidth <= 900 then "w-100" else ""}'>
-                <a class='text-center px-5 py-3 px-md-4 py-md-2 text-capitalize button__headerMenu' id='#{(item.link).replace("#", "")}-menuBtn' >#{item.title}</a>
+                <a class='text-center px-5 py-3 px-md-4 py-md-2 text-capitalize button__headerMenu w-100' id='#{(item.link).replace("#", "")}-menuBtn' >#{item.title}</a>
             </li> 
         "
 

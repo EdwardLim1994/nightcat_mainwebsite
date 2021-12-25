@@ -920,7 +920,7 @@ export default class Policy
     render: ->
         return "
             #{SectionHeader.renderSectionTitle(@sectionTitleComponent)}
-            <div class='container mt-3 mb-5'>
+            <div class='container mt-3 pb-2 mb-5'>
                 <div class='accordion' id='policyBody'></div>
             </div>
         "

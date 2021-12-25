@@ -1,6 +1,7 @@
 import $ from "jquery"
 import Policy from "../renders/Policy.coffee"
 import Header from "../renders/Header.coffee"
+import ChangeIcon from "./helpers/ChangeIcon.coffee"
 
 export default class SwitchPage
     constructor: ->
@@ -13,6 +14,8 @@ export default class SwitchPage
         @policyHeader = $("#policyContainer > div > h2")
         @policyBody = $("#policyBody")
         @contactUsBody = $("#contactUs")
+        @headerMenuBtn = $("#header-menu-btn")
+        @headerMenuBody = $("#header-menu-body")
         @events()
         return
 
@@ -47,6 +50,12 @@ export default class SwitchPage
 
                                 @policyHeader.empty().text(menu.title)
                                 @policyBody.empty().html(@policy.generateAccordions(menu.link))
+
+                                if @headerMenuBtn.length > 0
+                                    ChangeIcon.changeMenuIcon({
+                                        headerMenuBody: @headerMenuBody,
+                                        headerMenuBtn: @headerMenuBtn
+                                    })
                             )
                         )
             )    
