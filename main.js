@@ -23,6 +23,7 @@ import ShowProductDetail from './components/scripts/functions/ShowProductDetail.
 import SendMessage from './components/scripts/functions/SendMessage.coffee';
 import SwitchPage from './components/scripts/functions/SwitchPage.coffee';
 import ShowHeaderContact from './components/scripts/functions/ShowHeaderContact.coffee';
+import SocialMediaLink from './components/scripts/functions/SocialMediaLink.coffee';
 
 // IMport custom style
 import 'aos/dist/aos.css';
@@ -77,6 +78,7 @@ const sendMessage = new SendMessage();
 const switchPage = new SwitchPage();
 const scrollToPosition = new ScrollToPosition();
 const showHeaderContact = new ShowHeaderContact();
+const socialMediaLink = new SocialMediaLink();
 
 $(document).ready(function () {
 	AOS.init();
