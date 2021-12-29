@@ -30,10 +30,15 @@ export default class Services
                 title: "Website",
                 description: "Build customised website for customer, depending on their sector and needs",
             },
+            # {
+            #     img: "/images/services/bot.jpg",
+            #     title: "Chat AutoReply BOT",
+            #     description: "Create bot (facebook, whatsapp and others) to auto reply customer various enquiries",
+            # },
             {
-                img: "/images/services/bot.jpg",
-                title: "Chat AutoReply BOT",
-                description: "Create bot (facebook, whatsapp and others) to auto reply customer various enquiries",
+                img: "/images/services/ordering.jpg",
+                title: "Customer Ordering System",
+                description: "Allow to combine all customer order to allow production have easier grasp on orders to be prepared",
             },
             {
                 img: "/images/services/pos.jpg",
