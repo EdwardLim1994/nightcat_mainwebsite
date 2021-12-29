@@ -22,6 +22,7 @@ import ShowServiceDetail from './components/scripts/functions/ShowServiceDetail.
 import ShowProductDetail from './components/scripts/functions/ShowProductDetail.coffee';
 import SendMessage from './components/scripts/functions/SendMessage.coffee';
 import SwitchPage from './components/scripts/functions/SwitchPage.coffee';
+import ShowHeaderContact from './components/scripts/functions/ShowHeaderContact.coffee';
 
 // IMport custom style
 import 'aos/dist/aos.css';
@@ -42,21 +43,6 @@ const policy = new Policy();
 
 // Set latest year on copyright notice
 $('#latestYear').text(new Date().getFullYear());
-
-$('#whatsapp-link').on('click', function () {
-	//If current device is on mobile, redirect to mobile based url, otherwise redirect to desktop based url
-	if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
-		window.open(
-			'https://wa.me/+60126113810?text=I want to know more about Attendance System.',
-			'_blank'
-		);
-	} else {
-		window.open(
-			'https://web.whatsapp.com/send?phone=%2B60126113810&text=I want to know more about Attendance System.&app_absent=0',
-			'_blank'
-		);
-	}
-});
 
 if (window.innerWidth > 900) {
 	$('#home').css('margin-top', '10rem');
@@ -90,6 +76,7 @@ const showProductDetail = new ShowProductDetail();
 const sendMessage = new SendMessage();
 const switchPage = new SwitchPage();
 const scrollToPosition = new ScrollToPosition();
+const showHeaderContact = new ShowHeaderContact();
 
 $(document).ready(function () {
 	AOS.init();

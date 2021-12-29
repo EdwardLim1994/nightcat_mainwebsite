@@ -1,5 +1,6 @@
 import $ from "jquery"
 import SectionHeader from "../blocks/SectionHeader.coffee"
+import env from "../env.coffee"
 
 export default class ContactUs
     constructor: ->
@@ -17,7 +18,7 @@ export default class ContactUs
                 #{SectionHeader.renderSectionTitle(@sectionTitleComponent)}
                 <div class='row d-flex'>
                     <div class='order-2 order-md-1 col-12 col-md-6 border-right'>
-                        <a class='text-light' class='' href='tel:+6 0126113810'>
+                        <a class='text-light' class='' href='tel:+#{env.PHONE_NUM}'>
                             <div class='row'>
                                 <div class='col-2 text-right'>
                                     <i class='fas fa-phone'></i>
@@ -28,13 +29,13 @@ export default class ContactUs
                                 
                             </div>
                         </a>
-                        <a class='text-light' class='' href='mailto:nightcatdigitalsolutions@gmail.com'>
+                        <a class='text-light' class='' href='mailto:#{env.EMAIL}'>
                             <div class='row'>
                                 <div class='col-2 text-right'>
                                     <i class='fas fa-envelope'></i>
                                 </div>
                                 <div class='col-10 '>
-                                    <p>nightcatdigitalsolutions@gmail.com</p>
+                                    <p>#{env.EMAIL}</p>
                                 </div>
                                 
                             </div>
@@ -52,7 +53,7 @@ export default class ContactUs
                         </a>
                         <div class='row mb-4'>
                             <div class='col-12 d-flex justify-content-around'>
-                                <a id='whatsapp-link'>
+                                <a class='whatsapp-link'>
                                     <i class='fab fa-whatsapp fa-2x whatsapp'></i>
                                 </a>
                                 <a id='facebook-link' href='https://www.facebook.com/nightcatdigitalsolutions'>

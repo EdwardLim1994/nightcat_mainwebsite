@@ -12,7 +12,6 @@ export default class SendMessage
         @contactFormSubmitBtn = $("#contactForm-submitBtn")
         @modalContent = $("#modalWatning-content")
         @screenWidth = 1025
-        @phone = "+60167227910"#"+60126113810"
         @events()
         return
 
