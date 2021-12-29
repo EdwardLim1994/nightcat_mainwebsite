@@ -3,7 +3,10 @@ import $ from "jquery"
 export default class Header
     constructor: ->
         @titleImage = "./images/titleImage.jpeg"
-
+        @header = {
+            name: "Nightcat Digital Solutions",
+            subtitle: "Help to enchance Traditional Business Model to be better equipped post Covid 19 and Allow New Business operation to be run smoothly using Newest Technology Available"
+        }
         @headerMenu = [
             {
                 type: "single",
@@ -95,8 +98,8 @@ export default class Header
         return "
             <div class='blue darken-1 d-flex justify-content-center align-items-center flex-column'>
                 <img class='img-fluid rounded p-2 header__logo' src='#{@titleImage}' alt='Nightcat Logo'/>
-                <h2 class='text-white h2 h2-responsive text-uppercase font-weight-bold p-0 m-0'>Nightcat Digital Solutions</h2>
-                <p class='text-white small p-0 m-0 mb-2 header__subtitle'>Improving Traditional Business Model and Challenge New Technology Limits</p>
+                <h2 class='text-white h2 h2-responsive text-uppercase font-weight-bold p-0 m-0'>#{@header.name}</h2>
+                <p class='text-white small p-0 m-0 mb-2 header__subtitle'>#{@header.subtitle}</p>
             </div>
             <div class='header__menuBackground'>
                 <ul class='header__menuBody text-white d-flex flex-row justify-content-center aligh-items-center m-0 p-0'>
