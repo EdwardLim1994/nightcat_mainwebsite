@@ -34,8 +34,15 @@ export default class OurTeam
             {
                 name: "Shafie",
                 title: "Frontend Developer",
-                description: "Shafie is passionate about coding and love to troubleshoot problems regarding software or hardware. Interest in IT development that can help in future coding experiences and knowledges. A graduate from Universiti Tun Hussein Onn Malaysia that hold Bachelor Degreee in Computer Science (Software Engineering).",
+                description: "Shafie is passionate about coding and love to troubleshoot problems regarding software or hardware. Interest in IT development that can help in future coding experiences and knowledges. A graduate from Universiti Tun Hussein Onn Malaysia that hold Bachelor Degree in Computer Science (Software Engineering).",
                 img: "/images/ourteam/t4.jpg",
+                position: "bottom"
+            },
+            {
+                name: "Edward Lim",
+                title: "Full Stack Developer",
+                description: "Edward Lim is passionate about making an appearing website while maintaining the overall performance for better user experience. Love to explore new technologies in order to deliver the best product as he can. Graduate from Universiti Teknikal Malaysia Melaka (UTeM) that hold Bachelor Degree in Computer Science (Interactive Media) with Honour",
+                img: "/images/ourteam/edward_lim.jpg",
                 position: "bottom"
             },
             {
@@ -51,8 +58,8 @@ export default class OurTeam
     render: ->
         return "
             #{SectionHeader.renderSectionTitle(@sectionTitleComponent)}
-            <div class='container'>
-                <div class='row'>
+            <div class='container-fluid px-5'>
+                <div class='row px-3'>
                 #{
                     @teamMembers.map((member, key) => 
                         switch member.position
@@ -65,7 +72,7 @@ export default class OurTeam
 
                             when "bottom"
                                 return "
-                                    <div class='col-4 p-0 px-3 my-5 d-flex flex-wrap'>
+                                    <div class='col-3 p-0 px-3 my-5 d-flex flex-wrap'>
                                         #{@generateTeamBlock(member, key)}
                                     </div>
                                 "
@@ -126,8 +133,8 @@ export default class OurTeam
                     <h2 class='card-title text-center p-0 m-0 py-2'>#{teamMember.name}</h2>
                     <p class='text-center text-muted p-0 m-0'>#{teamMember.title}</p>
                     <hr>
-                    <div class='card-body'>
-                        <p class='card-text'>#{teamMember.description}</p>
+                    <div class='card-body px-5'>
+                        <p class='card-text text-justify'>#{teamMember.description}</p>
                     </div>
                 </div>
             #{if window.innerWidth <= 900 then "</div>" else ""}
