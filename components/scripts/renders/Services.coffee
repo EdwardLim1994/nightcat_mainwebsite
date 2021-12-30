@@ -36,7 +36,7 @@ export default class Services
             #     description: "Create bot (facebook, whatsapp and others) to auto reply customer various enquiries",
             # },
             {
-                img: "/images/services/ordering.jpg",
+                img: "./images/ordering.jpg",
                 title: "Customer Ordering System",
                 description: "Allow to combine all customer order to allow production have easier grasp on orders to be prepared",
             },

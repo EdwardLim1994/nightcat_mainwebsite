@@ -42,10 +42,9 @@ export default class SwitchPage
         $(document).ready(() =>
             currentHash = window.location.hash
             if currentHash
-                switch currentHash
-                    when "#privaryPolicy" or "#returnRefund" or "#shippingPolicy" or "#termsCondition"
+                switch
+                    when currentHash is "#privaryPolicy" or currentHash is "#returnRefund" or currentHash is "#shippingPolicy" or currentHash is "#termsCondition"
                         policyHeaderContent = @headerMenu.filter((header) => return header.type is "multi")[0]
-                        console.log (policyHeaderContent.menu).filter((header) => return header.link is currentHash)[0]
                         @showPolicyPage((policyHeaderContent.menu).filter((header) => return header.link is currentHash)[0])
                         return
 
@@ -77,7 +76,7 @@ export default class SwitchPage
         if not @contactUsBody.hasClass("d-none")
             @contactUsBody.addClass("d-none")
 
-        @policyHeader.empty().text(menu.title[@currentLang])
+        @policyHeader.empty().text(menu.title)
         @policyBody.empty().html(@policy.generateAccordions(menu.link))
 
         if @headerMenuBtn.length > 0

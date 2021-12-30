@@ -35,14 +35,14 @@ export default class OurTeam
                 name: "Shafie",
                 title: "Frontend Developer",
                 description: "Shafie is passionate about coding and love to troubleshoot problems regarding software or hardware. Interest in IT development that can help in future coding experiences and knowledges. A graduate from Universiti Tun Hussein Onn Malaysia that hold Bachelor Degree in Computer Science (Software Engineering).",
-                img: "/images/ourteam/t4.jpg",
+                img: "./images/t4.jpg",
                 position: "bottom"
             },
             {
                 name: "Edward Lim",
                 title: "Full Stack Developer",
                 description: "Edward Lim is passionate about making an appearing website while maintaining the overall performance for better user experience. Love to explore new technologies in order to deliver the best product as he can. Graduate from Universiti Teknikal Malaysia Melaka (UTeM) that hold Bachelor Degree in Computer Science (Interactive Media) with Honour",
-                img: "/images/ourteam/edward_lim.jpg",
+                img: "./images/edward_lim.jpg",
                 position: "bottom"
             },
             {
