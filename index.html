@@ -76,9 +76,6 @@
     <script type='text/javascript' src='/plugins/Smooth-Card-Carousel-jQuery-CSS3/scripts.js'></script>
     <script type='text/javascript'>
         $(document).ready(function () {
-            if (window.location.hash) {
-                history.replaceState(null, null, ' ');
-            }
 
             $('body').removeClass('preload');
             window.onhashchange = () => {
