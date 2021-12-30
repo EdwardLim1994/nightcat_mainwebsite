@@ -16,6 +16,8 @@ import ContactUs from './components/scripts/renders/ContactUs.coffee'
 import Footer from './components/scripts/renders/Footer.coffee'
 import Policy from './components/scripts/renders/Policy.coffee'
 import ScrollToTopBtn from './components/scripts/blocks/ScrollToTopBtn.coffee'
+import ShowHeaderContact from './components/scripts/functions/ShowHeaderContact.coffee'
+import SocialMediaLink from './components/scripts/functions/SocialMediaLink.coffee'
 
 import ScrollToPosition from './components/scripts/functions/ScrollToPosition.coffee'
 import ShowMenu from './components/scripts/functions/ShowMenu.coffee'
@@ -81,24 +83,8 @@ contactUs = new ContactUs()
 footer = new Footer()
 policy = new Policy()
 
-
 # Set latest year on copyright notice
 $('#latestYear').text(new Date().getFullYear());
-
-$('#whatsapp-link').on('click',  () ->
-	# If current device is on mobile, redirect to mobile based url, otherwise redirect to desktop based url
-	if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) 
-		window.open(
-			'https://wa.me/+60126113810?text=I want to know more about Attendance System.',
-			'_blank'
-		)
-	else 
-		window.open(
-			'https://web.whatsapp.com/send?phone=%2B60126113810&text=I want to know more about Attendance System.&app_absent=0',
-			'_blank'
-		)
-	
-);
 
 if (window.innerWidth > 900) 
 	$('#home').css('margin-top', '10rem')
@@ -116,7 +102,6 @@ else
 	$('#ourTeam').html(ourTeam.renderMobile())
 	$('#testimonials').html(testimonials.renderMobile())
 
-
 $('#home').html(home.render())
 $('#services').html(services.render())
 $('#aboutUs').html(aboutUs.render())
@@ -132,7 +117,9 @@ showProductDetail = new ShowProductDetail()
 sendMessage = new SendMessage()
 switchPage = new SwitchPage()
 scrollToPosition = new ScrollToPosition()
+showHeaderContact = new ShowHeaderContact()
+socialMediaLink = new SocialMediaLink()
 
 $(document).ready(() ->
-	AOS.init()	
-)
+	AOS.init();
+);
