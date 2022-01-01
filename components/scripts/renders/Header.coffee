@@ -98,18 +98,27 @@ export default class Header
     render: ->
         return "
             <div class='blue darken-3'>
-                <div class='m-0 p-0 py-2 d-flex justify-content-around align-items-center flex-row'>
-                    <a style='color:black;' class='text-center header__contact--whatsapp whatsapp-link d-flex flex-row justify-content-center align-items-center header__contact'>
+                <div class='m-0 p-0 py-2 d-flex justify-content-center align-items-center flex-row'>
+                    <a style='color:black;' class='w-100 text-center header__contact--whatsapp whatsapp-link d-flex flex-row justify-content-center align-items-center header__contact'>
+                        <i class='fab fa-whatsapp fa-2x headerContact__icon'></i>
+                        <p class='text-center p-0 m-0 d-flex flex-row justify-content-center align-items-center'>
                         <i class='fab fa-whatsapp fa-2x'></i>
-                        <p class='text-center p-0 m-0'>+#{env.PHONE_NUM}</p>
+                            <span class='headerContact__content'>+#{env.PHONE_NUM}</span>
+                        </p>
                     </a>
-                    <a style='color:black;' href='tel:+#{env.PHONE_NUM}' class='text-center header__contact--phone d-flex flex-row justify-content-center align-items-center header__contact'>
+                    <a style='color:black;' href='tel:+#{env.PHONE_NUM}' class='w-100 text-center header__contact--phone d-flex flex-row justify-content-center align-items-center header__contact'>
+                        <i class='fas fa-phone fa-2x headerContact__icon'></i>
+                        <p class='text-center p-0 m-0 d-flex flex-row justify-content-center align-items-center'>
                         <i class='fas fa-phone fa-2x'></i>
-                        <p class='text-center p-0 m-0'>+#{env.PHONE_NUM}</p>
+                            <span class='headerContact__content'>+#{env.PHONE_NUM}</span>
+                        </p>
                     </a>
-                    <a style='color:black;' href='mailto:#{env.EMAIL}' class='text-center header__contact--email d-flex flex-row justify-content-center align-items-center header__contact'>
+                    <a style='color:black;' href='mailto:#{env.EMAIL}' class='w-100 text-center header__contact--email d-flex flex-row justify-content-center align-items-center header__contact'>
+                        <i class='fas fa-envelope fa-2x headerContact__icon'></i>
+                        <p class='text-center p-0 m-0 d-flex flex-row justify-content-center align-items-center'>
                         <i class='fas fa-envelope fa-2x'></i>
-                        <p class='text-center p-0 m-0'>#{env.EMAIL}</p>
+                            <span class='headerContact__content'>#{env.EMAIL}</span>
+                        </p>
                     </a>
                 </div>
             </div>
