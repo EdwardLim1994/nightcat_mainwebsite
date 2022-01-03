@@ -109,7 +109,7 @@ export default class Products
                 id: "contact-irssoft"
                 name: "IRS Soft",
                 price: "RM1800.00",
-                img: "/images/products/irs.jpg"
+                img: "./images/irs.jpg"
                 message: {
                     mobile: "https://wa.me/+60126113810?text=#{
                         switch @currentLang
@@ -142,7 +142,7 @@ export default class Products
                 id: "contact-autocountreporting"
                 name: "Autocount Reporting",
                 price: "RM1800.00",
-                img: "/images/products/autocount.jpg"
+                img: "./images/autocount.jpg"
                 message: {
                     mobile: "https://wa.me/+60126113810?text=#{
                         switch @currentLang
@@ -175,7 +175,7 @@ export default class Products
                 id: "contact-branchreport1"
                 name: "Branch Report 1",
                 price: "RM1800.00",
-                img: "/images/products/branch_report_1.jpg"
+                img: "./images/branch_report_1.jpg"
                 message: {
                     mobile: "https://wa.me/+60126113810?text=#{
                         switch @currentLang
@@ -208,7 +208,7 @@ export default class Products
                 id: "contact-branchreport2"
                 name: "Branch Report 2",
                 price: "RM1800.00",
-                img: "/images/products/branch_report_2.jpg"
+                img: "./images/branch_report_2.jpg"
                 message: {
                     mobile: "https://wa.me/+60126113810?text=#{
                         switch @currentLang

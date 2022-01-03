@@ -1,5 +1,6 @@
 # import plugin
 import $ from 'jquery'
+import 'jquery.cookie'
 import AOS from 'aos'
 import './plugins/Smooth-Card-Carousel-jQuery-CSS3/scripts.js'
 
@@ -15,16 +16,18 @@ import Partner from './components/scripts/renders/Partner.coffee'
 import ContactUs from './components/scripts/renders/ContactUs.coffee'
 import Footer from './components/scripts/renders/Footer.coffee'
 import Policy from './components/scripts/renders/Policy.coffee'
-import ScrollToTopBtn from './components/scripts/blocks/ScrollToTopBtn.coffee'
+import BottomUtilities from './components/scripts/renders/BottomUtilities.coffee'
+
 import ShowHeaderContact from './components/scripts/functions/ShowHeaderContact.coffee'
 import SocialMediaLink from './components/scripts/functions/SocialMediaLink.coffee'
-
 import ScrollToPosition from './components/scripts/functions/ScrollToPosition.coffee'
 import ShowMenu from './components/scripts/functions/ShowMenu.coffee'
 import ShowServiceDetail from './components/scripts/functions/ShowServiceDetail.coffee'
 import ShowProductDetail from './components/scripts/functions/ShowProductDetail.coffee'
 import SendMessage from './components/scripts/functions/SendMessage.coffee'
 import SwitchPage from './components/scripts/functions/SwitchPage.coffee'
+import SwitchLanguage from './components/scripts/functions/SwitchLanguage.coffee'
+
 
 # Import custom style
 import 'aos/dist/aos.css'
@@ -43,12 +46,16 @@ import "./images/ourteam/edward_lim.jpg"
 import "./images/ourteam/t3.jpg"
 import "./images/ourteam/t4.jpg"
 import "./images/partner/autocount.png"
-import "./images/partner/mypoint_marketing.png"
-import "./images/products/celcom.jpg"
-import "./images/products/hotlink.jpg"
-import "./images/products/umobile.jpg"
+import "./images/partner/irs.png"
+# import "./images/products/celcom.jpg"
+# import "./images/products/hotlink.jpg"
+# import "./images/products/umobile.jpg"
+import "./images/products/autocount.jpg"
+import "./images/products/irs.jpg"
+import "./images/products/branch_report_1.jpg"
+import "./images/products/branch_report_2.jpg"
 import "./images/services/attendance.jpg"
-import "./images/services/bot.jpg"
+# import "./images/services/bot.jpg"
 import "./images/services/ecommerce.jpg"
 import "./images/services/payment.jpg"
 import "./images/services/pos.jpg"
@@ -84,9 +91,21 @@ partners = new Partner()
 contactUs = new ContactUs()
 footer = new Footer()
 policy = new Policy()
+bottomUtilities = new BottomUtilities()
 
 # Set latest year on copyright notice
 $('#latestYear').text(new Date().getFullYear());
+
+# Set Initial html language
+if $.cookie('lang')
+	switch $.cookie('lang')
+		when 'CN'
+			$('html').attr('lang', 'zh')
+			break
+
+		when 'BM'
+			$('html').attr('lang', 'ms')
+			break
 
 if (window.innerWidth > 900) 
 	$('#home').css('margin-top', '10rem')
@@ -111,7 +130,7 @@ $('#partners').html(partners.render())
 $('#contactUs').html(contactUs.render())
 $('#footer').html(footer.render())
 
-$(ScrollToTopBtn.generateScrollToTopBtn()).insertAfter('footer')
+$(bottomUtilities.render()).insertAfter('footer')
 
 showMenu = new ShowMenu()
 showServiceDetail = new ShowServiceDetail()
@@ -121,6 +140,7 @@ switchPage = new SwitchPage()
 scrollToPosition = new ScrollToPosition()
 showHeaderContact = new ShowHeaderContact()
 socialMediaLink = new SocialMediaLink()
+switchLanguage = new SwitchLanguage()
 
 $(document).ready(() ->
 	AOS.init();

@@ -1,7 +1,7 @@
 export default env = {
     PHONE_NUM: "60126113810"
     EMAIL: "nightcatdigitalsolutions@gmail.com"
-    DOMAIN : "nightcatdigitalsolutions.com"
+    DOMAIN : "jobhunting.epizy.com"
     URL_DICTIONARY: {
         space: "%0A"
     }

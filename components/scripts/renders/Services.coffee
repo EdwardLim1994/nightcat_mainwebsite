@@ -21,7 +21,7 @@ export default class Services
         }
         @services = [
             {
-                img: "/images/services/report.jpg",
+                img: "./images/report.jpg",
                 title: {
                     EN: "Reporting",
                     BM: "pelaporan",
@@ -34,7 +34,7 @@ export default class Services
                 }
             },
             {
-                img: "/images/services/attendance.jpg",
+                img: "./images/attendance.jpg",
                 title: {
                     EN: "Attendance",
                     BM: "kehadiran",
@@ -47,7 +47,7 @@ export default class Services
                 }
             },
             {
-                img: "/images/services/ecommerce.jpg",
+                img: "./images/ecommerce.jpg",
                 title: {
                     EN: "Ecommerce",
                     BM: "E-dagang",
@@ -60,7 +60,7 @@ export default class Services
                 }
             },
             {
-                img: "/images/services/website.jpg",
+                img: "./images/website.jpg",
                 title: {
                     EN: "Website",
                     BM: "Laman Web",
@@ -78,7 +78,7 @@ export default class Services
             #     description: "Create bot (facebook, whatsapp and others) to auto reply customer various enquiries",
             # },
             {
-                img: "/images/services/ordering.jpg",
+                img: "./images/ordering.jpg",
                 title: {
                     EN: "Ordering System",
                     BM: "Sistem Pesanan",
@@ -91,7 +91,7 @@ export default class Services
                 }
             },
             {
-                img: "/images/services/pos.jpg",
+                img: "./images/pos.jpg",
                 title: {
                     EN: "Point Of Sales",
                     BM: "Titik Jualan",
@@ -104,7 +104,7 @@ export default class Services
                 }
             },
             {
-                img: "/images/services/payment.jpg",
+                img: "./images/payment.jpg",
                 title: {
                     EN: "Payment Gateway",
                     BM: "gerbang pembayaran",
@@ -117,7 +117,7 @@ export default class Services
                 }
             },
             {
-                img: "/images/services/seo.jpg",
+                img: "./images/seo.jpg",
                 title: {
                     EN: "Search Engine Optimzation(SEO)",
                     BM: "pengoptimuman enjin gelintar(SEO)",

@@ -37,7 +37,7 @@ export default class OurTeam
                     BM: "Hock Chai adalah pengasas Nightcat Digital Solutions sejak tahun 2013. Pada mula-mula, Hock Chai merupakan jurutera, pereka bentuk dan wakil sokongan bagi seluruh struktur dalam Nightcat. Untuk menjalankan syarikat dan menetapkan strategi bagi keseluruhan produk, dia kekal melibatkan diri dalam pelbagai jabatan bagi setiap syarikat yang dia pernah melibatkan diri",
                     CN: "Hock Chai 是 Nightcat Digital Solutions 的创始人，建立于2013年。早期， Hock Chai 兼顾着整个Nightcat的工程师，设计师，支援顾问的职位。 为了经营该公司和制定整体的产品策略，他经常参与其他曾帮助过的公司里的各个部门。"
                 },
-                img: "/images/ourteam/hock_chai.jpg",
+                img: "./images/hock_chai.jpg",
                 position: "top"
             },
             {
@@ -52,7 +52,7 @@ export default class OurTeam
                     BM: "Kim Yok adalah perekrut dan bekerjasama dengan jabatan sumber manusia. Dia juga sebagai akauntan bagi seluruh syarikat. Tiada rancangan dapat dilaksanakan tanpa kebenarannya. Dia memainkan peranan penting dalam memantau kesejahteraan kakitangan dan menuju kepada objektif kewangan. Dia sebenarnya sukar dijumpai kerana dia sentiasa sibuk dengan kerja kertas yang banyak",
                     CN: "Kim Yok 是我们的招聘人员并且兼顾于人事部。她同时也是本公司的会计。没有任何一个计划不会在没有她的允许下执行的。她同时也为观察职员之间的和谐以及达到财务目标。有时难见她的人影因为她经常忙于文书工作。"
                 },
-                img: "/images/ourteam/kim_yok.jpg",
+                img: "./images/kim_yok.jpg",
                 position: "top"
             },
             {
@@ -67,7 +67,7 @@ export default class OurTeam
                     BM: "Jack Son suka dalam membina produk yang dapat disukai oleh orang ramai. Dia pernah terlibat dalam pelbagai bidang IT termasuklah perisian dan perkakasan. Dengan 15 tahun pengalaman dalam bidang kejuruteraan dan reka bentuk, dia mampu mengeluarkan penyelesaian yang berkesan dan mantap. Dia mempunyai Ijazah Sains dalam Sains Komputer dari College Tunku Abdul Rahman.",
                     CN: "Jack Son 热衷与建立人们会喜欢的产品。以前曾参与技术情报的领域，包括硬件与软件。他灵活运用了15年的工程与设计的经验，提供了有效且稳固的方案并且帮助了许多客户。他拥有于College Tunku Abdul Rahman的电脑科学的学位。"
                 },
-                img: "/images/ourteam/t3.jpg",
+                img: "./images/t3.jpg",
                 position: "bottom"
             },
             {
@@ -82,7 +82,7 @@ export default class OurTeam
                     BM: "Shafie bersemangat dalam pengekodan dan suka dalam menyelesaikan masalah berkait dengan perisian atau perkakasan. Dia amat berminat dalam pembangunan IT yang dapat membantunya dalam memahirkan pengekodan dengan lebih tegas dan berpengalaman pada masa akan datang. Dia merupakan siswazah dari Universiti Tun Hussein Onn Malaysia dan telah mengambil Ijazah Sarjana Muda dalam Sains Komputer (Kejuruteraan Perisian).",
                     CN: "Shafie 热衷于偏码并且热爱解决关于软件与硬件的问题。对于技术信息的发展特有兴趣，因为这样可以帮助他增长关于偏码的经验与知识。毕业于Universiti Tun Hussein Onn Malaysia 并且拥有电脑科学（软件工程）的学位。"
                 },
-                img: "/images/ourteam/t4.jpg",
+                img: "./images/t4.jpg",
                 position: "bottom"
             },
             {
@@ -97,7 +97,7 @@ export default class OurTeam
                     BM: "Edward Lim suka dalam membina laman web yang menarik sementara menjamin prestasi yang stabil supaya dapat memberikan pengalaman terbaik kepada pengguna. Dia juga amat berminat dalam meneroka teknologi-teknologi baru supaya mampu membina laman web moden yang berkualiti. Dia merupakan siswazah dari Universiti Teknikal Malaysia Melaka (UTeM) dan mempunyai Ijazah Sarjana Muda dalam Sains Komputer (Interaktif Media) dengan kepujian."
                     CN: "Edward Lim 热衷于建立吸引人的网页并且同时保持着卓越的性能以便用户能有更好的体验。喜爱于探索新的技术以便能进他所能地持续创建摩登的网页。毕业于Universiti Teknikal Malaysia Melaka (UTeM) 并且拥有电脑科学（互动媒体）的学位。"
                 },
-                img: "/images/ourteam/edward_lim.jpg",
+                img: "./images/edward_lim.jpg",
                 position: "bottom"
             },
             {
@@ -112,7 +112,7 @@ export default class OurTeam
                     BM: "Jean Mean adalah pegawai aministratif dan penasihat am dalam Nightcat. Dia memainkan peranan dalam mengawasi fungsi aministratif, kewangan, perundangan, pematuhan dan urusan kerajaan dalam syarikat, untuk memastikan semua benda adalah mengikut tertib supaya kakitangan dapat fokus dalam bidang teknologi dengan sepenuhnya.",
                     CN: "Jean Mean 是Nightcat的行政人员同时也是总法律顾问。她监督着公司的行政，金融，法律，承诺以及政务。她确保任何事情都能够到位以便其他支援能够更专注于技术涵盖的课题。"
                 },
-                img: "/images/ourteam/jean_mean.jpg",
+                img: "./images/jean_mean.jpg",
                 position: "bottom"
             },
         ]

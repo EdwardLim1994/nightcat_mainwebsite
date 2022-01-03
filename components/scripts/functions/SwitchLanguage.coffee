@@ -14,7 +14,7 @@ export default class SwitchLanguage
                 $.removeCookie(
                     "lang", 
                     {
-                        # domain: "#{env.DOMAIN}"
+                        domain: "#{env.DOMAIN}"
                     }
                 )
                 
@@ -24,7 +24,7 @@ export default class SwitchLanguage
                     $(e.currentTarget).data("lang"), 
                     {
                         expires: 1, 
-                        # domain: "#{env.DOMAIN}"
+                        domain: "#{env.DOMAIN}"
                     }
                 )
 
