@@ -14,6 +14,8 @@ export default class SwitchPage
         @policyContainer = $("#policyContainer")
         @policyHeader = $("#policyContainer > div > h2")
         @policyBody = $("#policyBody")
+        @lastUpdateDescription = $("#lastUpdate-description")
+        @lastUpdateContent = $("#lastUpdate-content")
         @contactUsBody = $("#contactUs")
         @headerMenuBtn = $("#header-menu-btn")
         @headerMenuBody = $("#header-menu-body")
@@ -22,7 +24,6 @@ export default class SwitchPage
         return
 
     events: ->
-        
         @headerMenu.forEach((menu) =>
             $("#{menu.link}-menuBtn").click({type: menu.type, menu: menu.menu}, (e) =>
                 switch e.data.type
@@ -42,10 +43,9 @@ export default class SwitchPage
         $(document).ready(() =>
             currentHash = window.location.hash
             if currentHash
-                switch currentHash
-                    when "#privaryPolicy" or "#returnRefund" or "#shippingPolicy" or "#termsCondition"
+                switch
+                    when currentHash is "#privaryPolicy" or currentHash is "#returnRefund" or currentHash is "#shippingPolicy" or currentHash is "#termsCondition"
                         policyHeaderContent = @headerMenu.filter((header) => return header.type is "multi")[0]
-                        console.log (policyHeaderContent.menu).filter((header) => return header.link is currentHash)[0]
                         @showPolicyPage((policyHeaderContent.menu).filter((header) => return header.link is currentHash)[0])
                         return
 
@@ -76,8 +76,10 @@ export default class SwitchPage
 
         if not @contactUsBody.hasClass("d-none")
             @contactUsBody.addClass("d-none")
-
-        @policyHeader.empty().text(menu.title[@currentLang])
+            
+        @policyHeader.empty().text(@policy.setPolicyTitle(menu.link))
+        @lastUpdateDescription.empty().text(@policy.setPolicyLastUpdateDescription())
+        @lastUpdateContent.empty().text(@policy.setPolicyLastUpdateContent(menu.link))
         @policyBody.empty().html(@policy.generateAccordions(menu.link))
 
         if @headerMenuBtn.length > 0

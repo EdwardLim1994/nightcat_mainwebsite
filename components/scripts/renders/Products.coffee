@@ -94,7 +94,7 @@ export default class Products
 
     render: ->
         return "
-            #{SectionHeader.renderSectionTitle(@sectionTitleComponent)}
+            #{SectionHeader.render(@sectionTitleComponent, @currentLang)}
             <div class='container pb-5'>
                 <div class='row'>
                     #{@products.map((product, key) => @renderCardsContainer(product, key) ).join("")}
@@ -104,7 +104,7 @@ export default class Products
 
     renderMobile: ->
         return "
-            #{SectionHeader.renderSectionTitle(@sectionTitleComponent)}
+            #{SectionHeader.render(@sectionTitleComponent, @currentLang)}
             <div id='product-carousel' class='carousel slide' data-ride='carousel'>
                 <ol class='carousel-indicators'>
                     #{@products.map((product, key) => 

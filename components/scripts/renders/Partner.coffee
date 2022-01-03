@@ -1,11 +1,21 @@
 import $ from "jquery"
+import "jquery.cookie"
 import SectionHeader from "../blocks/SectionHeader.coffee"
 
 export default class Partner
     constructor: ->
+        @currentLang = if $.cookie("lang") then $.cookie("lang") else "EN"
         @sectionTitleComponent = {
-            title: "Partners",
-            subtitle: "Our reliable Partners"
+            title: {
+                EN: "Partners",
+                BM: "rakan kerja",
+                CN: "合作伙伴"
+            }
+            subtitle: {
+                EN: "Our reliable Partners"
+                BM: "Rakan Kerja yang kami percayai",
+                CN: "我们所信任的合作伙伴"
+            }
             background: "dark"
         }
         @partners = [
@@ -24,7 +34,7 @@ export default class Partner
 
     render: ->
         return "
-            #{SectionHeader.renderSectionTitle(@sectionTitleComponent)}
+            #{SectionHeader.render(@sectionTitleComponent, @currentLang)}
             <div class='container pb-5'>
                 <div class='d-flex #{if window.innerWidth > 900 then "flex-row" else "flex-column"} justify-content-around align-items-center'>
                     #{@partners.map((partner, key) ->

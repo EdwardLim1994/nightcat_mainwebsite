@@ -1,5 +1,6 @@
 // import plugin
 import $ from 'jquery';
+import 'jquery.cookie';
 import AOS from 'aos';
 
 // import custom components
@@ -14,7 +15,7 @@ import Partner from './components/scripts/renders/Partner.coffee';
 import ContactUs from './components/scripts/renders/ContactUs.coffee';
 import Footer from './components/scripts/renders/Footer.coffee';
 import Policy from './components/scripts/renders/Policy.coffee';
-import ScrollToTopBtn from './components/scripts/blocks/ScrollToTopBtn.coffee';
+import BottomUtilities from './components/scripts/renders/BottomUtilities.coffee';
 
 import ScrollToPosition from './components/scripts/functions/ScrollToPosition.coffee';
 import ShowMenu from './components/scripts/functions/ShowMenu.coffee';
@@ -24,6 +25,7 @@ import SendMessage from './components/scripts/functions/SendMessage.coffee';
 import SwitchPage from './components/scripts/functions/SwitchPage.coffee';
 import ShowHeaderContact from './components/scripts/functions/ShowHeaderContact.coffee';
 import SocialMediaLink from './components/scripts/functions/SocialMediaLink.coffee';
+import SwitchLanguage from './components/scripts/functions/SwitchLanguage.coffee';
 
 // IMport custom style
 import 'aos/dist/aos.css';
@@ -41,6 +43,20 @@ const partners = new Partner();
 const contactUs = new ContactUs();
 const footer = new Footer();
 const policy = new Policy();
+const bottomUtilities = new BottomUtilities();
+
+// Set Initial html language
+if ($.cookie('lang')) {
+	switch ($.cookie('lang')) {
+		case 'CN':
+			$('html').attr('lang', 'zh');
+			break;
+
+		case 'BM':
+			$('html').attr('lang', 'ms');
+			break;
+	}
+}
 
 // Set latest year on copyright notice
 $('#latestYear').text(new Date().getFullYear());
@@ -54,7 +70,7 @@ if (window.innerWidth > 900) {
 	$('#testimonials').html(testimonials.render());
 } else {
 	$('#home').css('margin-top', '7.7rem');
-	$('#policy').html(policy.render()).css('margin-top', '8rem');
+	$('#policyContainer').html(policy.render()).css('margin-top', '8rem');
 	$('#header').html(header.renderMobile());
 	$(header.renderMenu()).insertBefore('header');
 	$('#products').html(products.renderMobile());
@@ -69,7 +85,7 @@ $('#partners').html(partners.render());
 $('#contactUs').html(contactUs.render());
 $('#footer').html(footer.render());
 
-$(ScrollToTopBtn.generateScrollToTopBtn()).insertAfter('footer');
+$(bottomUtilities.render()).insertAfter('footer');
 
 const showMenu = new ShowMenu();
 const showServiceDetail = new ShowServiceDetail();
@@ -79,6 +95,7 @@ const switchPage = new SwitchPage();
 const scrollToPosition = new ScrollToPosition();
 const showHeaderContact = new ShowHeaderContact();
 const socialMediaLink = new SocialMediaLink();
+const switchLanguage = new SwitchLanguage();
 
 $(document).ready(function () {
 	AOS.init();
