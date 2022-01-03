@@ -212,7 +212,7 @@ export default class Testimonial
         return "
             #{if window.innerWidth <= 900 then "<div class='col-12 pb-5 pb-md-0'>" else "<div class='my-card py-2'>"}
                 <div class='card' data-aos='zoom-in' data-aos-delay='#{offset * 100}'>
-                    <img class='card-img-top w-100 h-100 p-0 m-0' src='#{testimonial.img}' alt='Card image cap'>
+                    <img class='card-img-top w-100 h-100 p-0 m-0' src='#{testimonial.img}' alt='#{testimonial.company} cap' title='#{testimonial.company}'>
                     <div class='card-body p-0 m-0'>
                         <h4 class='card-title pt-3 text-center'>#{testimonial.company}</h4>
                         <div class='card-text'>

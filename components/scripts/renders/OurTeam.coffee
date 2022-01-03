@@ -190,7 +190,7 @@ export default class OurTeam
             #{if window.innerWidth <= 900 then "<div class='col-12 pb-5 pb-md-0'>" else ""}
                 <div class='card hoverable' data-aos='fade-up' data-aos-delay='#{offset * 100}'>
                     <div class='mx-auto mt-1 mt-md-2 py-3'>
-                        <img class='img-thumbnail rounded-circle teamMember__thumbnail' src='#{teamMember.img}' alt='#{teamMember.name} Thumbnail'>
+                        <img class='img-thumbnail rounded-circle teamMember__thumbnail' src='#{teamMember.img}' alt='#{teamMember.name} Thumbnail' title='#{teamMember.name}'>
                     </div>
 
                     <h2 class='card-title text-center p-0 m-0 py-2'>#{teamMember.name}</h2>

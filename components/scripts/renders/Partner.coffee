@@ -40,7 +40,7 @@ export default class Partner
                     #{@partners.map((partner, key) ->
                         return "
                             <a class='rounded w-100 my-0 d-flex justify-content-center align-items-center' data-aos='fade-up' data-aos-delay='#{key * 100}'>
-                                <img class='img-fluid w-75 p-3 partner__service' src='#{partner.img}' alt='#{partner.alt}'/>
+                                <img class='img-fluid w-75 p-3 partner__service' src='#{partner.img}' alt='#{partner.alt}' title='#{partner.alt}'/>
                             </a>
                         "
                     ).join("")}

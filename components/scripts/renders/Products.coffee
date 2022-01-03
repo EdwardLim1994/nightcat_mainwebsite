@@ -286,7 +286,7 @@ export default class Products
         <div class='col-12 col-md-#{12 / @products.length} pb-5 pb-md-0'>
             <div class='product card hoverable' data-aos='flip-right' data-aos-delay='#{offset * 100}'>
                 <div class='blue card-header text-uppercase text-center text-white'>#{product.name}</div>
-                <img class='product__img card-img-top mx-auto p-3' src='#{product.img}' alt='#{product.name} image'>
+                <img class='product__img card-img-top mx-auto p-3' src='#{product.img}' alt='#{product.name} image' title='#{product.name}'>
                 #{
                     ###
                 <a class='product__detailBtn blue lighten-2 hoverable w-100 text-center text-white d-flex flex-column py-2'>
