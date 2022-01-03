@@ -14,6 +14,8 @@ export default class SwitchPage
         @policyContainer = $("#policyContainer")
         @policyHeader = $("#policyContainer > div > h2")
         @policyBody = $("#policyBody")
+        @lastUpdateDescription = $("#lastUpdate-description")
+        @lastUpdateContent = $("#lastUpdate-content")
         @contactUsBody = $("#contactUs")
         @headerMenuBtn = $("#header-menu-btn")
         @headerMenuBody = $("#header-menu-body")
@@ -22,7 +24,6 @@ export default class SwitchPage
         return
 
     events: ->
-        
         @headerMenu.forEach((menu) =>
             $("#{menu.link}-menuBtn").click({type: menu.type, menu: menu.menu}, (e) =>
                 switch e.data.type
@@ -75,8 +76,10 @@ export default class SwitchPage
 
         if not @contactUsBody.hasClass("d-none")
             @contactUsBody.addClass("d-none")
-
-        @policyHeader.empty().text(menu.title)
+            
+        @policyHeader.empty().text(@policy.setPolicyTitle(menu.link))
+        @lastUpdateDescription.empty().text(@policy.setPolicyLastUpdateDescription())
+        @lastUpdateContent.empty().text(@policy.setPolicyLastUpdateContent(menu.link))
         @policyBody.empty().html(@policy.generateAccordions(menu.link))
 
         if @headerMenuBtn.length > 0

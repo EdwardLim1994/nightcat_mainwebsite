@@ -8,22 +8,37 @@ export default class ShowHeaderContact
 
     events: ->
         @headerContact.forEach((contact) =>
-            @showContactDetail(".header__contact--#{contact}")    
+            @hoverHeaderContect(".header__contact--#{contact}")    
         )
-
-
         return
 
-    showContactDetail: (contactClass) ->
+    hoverHeaderContect: (contactClass) ->
         $(contactClass).on(
             mouseenter: (e) => 
-                $(e.currentTarget).find("p").animate(
-                    width: "100%"
-                , 500)
+                
+                setTimeout(() =>
+                    $(e.currentTarget).find("p").animate(
+                        width: "100%"
+                    , 500)
+                    $(e.currentTarget).find(".headerContact__content").animate(
+                        opacity: "100%"
+                    , 100)
+                    $(e.currentTarget).find(".headerContact__icon").animate(
+                        opacity: "0%"
+                    , 50)
+                , 200)  
                 return
             mouseleave: (e) => 
-                $(e.currentTarget).find("p").animate(
-                    width: "0%"
+                setTimeout(() => 
+                    $(e.currentTarget).find("p").animate(
+                        width: "0%"
+                    , 200)
+                    $(e.currentTarget).find(".headerContact__content").animate(
+                        opacity: "0%"
+                    , 300)
+                , 200)
+                setTimeout(() =>
+                    $(e.currentTarget).find(".headerContact__icon").css("opacity", 1)   
                 , 500)
                 return
         )
