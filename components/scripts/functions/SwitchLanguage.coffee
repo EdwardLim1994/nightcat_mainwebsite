@@ -23,7 +23,7 @@ export default class SwitchLanguage
                     "lang", 
                     $(e.currentTarget).data("lang"), 
                     {
-                        expires: 2, 
+                        expires: 1, 
                         # domain: "#{env.DOMAIN}"
                     }
                 )
