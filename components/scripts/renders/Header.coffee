@@ -181,7 +181,7 @@ export default class Header
                 </div>
             </div>
             <div class='blue darken-1 d-flex justify-content-center align-items-center flex-column'>
-                <img class='img-fluid p-2 header__logo' src='#{@titleImage}' alt='Nightcat Logo'/>
+                <img class='img-fluid m-2 header__logo hoverable' src='#{@titleImage}' alt='Nightcat Logo'/>
                 <h2 class='text-white h2 h2-responsive text-uppercase font-weight-bold p-0 m-0'>#{@header.name}</h2>
                 <p class='text-white small p-0 m-0 mb-2 header__subtitle'>#{@header.subtitle[@currentLang]}</p>
             </div>
