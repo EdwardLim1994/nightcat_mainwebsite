@@ -1,12 +1,50 @@
 import $ from "jquery"
+import "jquery.cookie"
 import SectionHeader from "../blocks/SectionHeader.coffee"
+import env from "../env.coffee"
 
 export default class ContactUs
     constructor: ->
+        @currentLang = if $.cookie("lang") then $.cookie("lang") else "EN"
         @sectionTitleComponent = {
-            title: "Contact Us",
-            subtitle: "We Provide Best Assistant"
+            title: {
+                EN: "Contact Us",
+                BM: "Hubingi Kami",
+                CN: "联络我们"
+            }
+            subtitle: {
+                EN: "We Provide Best Assistant"
+                BM: "Kami Akan Memberi Bantuan yang Sebaik Mungkin",
+                CN: "我们会提供最好的辅助"
+            }
             background: "dark"
+        }
+        @contactForm = {
+            name: {
+                EN: "Name",
+                BM: "Nama",
+                CN: "名字"
+            },
+            email: {
+                EN: "Email",
+                BM: "E-mel",
+                CN: "电邮"
+            },
+            subject: {
+                EN: "Subject",
+                BM: "Subjek",
+                CN: "主题"
+            },
+            message: {
+                EN: "Message",
+                BM: "Mesej",
+                CN: "信息"
+            },
+            button: {
+                EN: "Send",
+                BM: "Hantar",
+                CN: "发送"
+            },
         }
         return
 
@@ -14,10 +52,10 @@ export default class ContactUs
         return "
             
             <div class='container-fluid px-3 py-2'>
-                #{SectionHeader.renderSectionTitle(@sectionTitleComponent)}
+                #{SectionHeader.render(@sectionTitleComponent, @currentLang)}
                 <div class='row d-flex'>
                     <div class='order-2 order-md-1 col-12 col-md-6 border-right'>
-                        <a class='text-light' class='' href='tel:+6 0126113810'>
+                        <a class='text-light' class='' href='tel:+#{env.PHONE_NUM}'>
                             <div class='row'>
                                 <div class='col-2 text-right'>
                                     <i class='fas fa-phone'></i>
@@ -28,13 +66,13 @@ export default class ContactUs
                                 
                             </div>
                         </a>
-                        <a class='text-light' class='' href='mailto:nightcatdigitalsolutions@gmail.com'>
+                        <a class='text-light' class='' href='mailto:#{env.EMAIL}'>
                             <div class='row'>
                                 <div class='col-2 text-right'>
                                     <i class='fas fa-envelope'></i>
                                 </div>
                                 <div class='col-10 '>
-                                    <p>nightcatdigitalsolutions@gmail.com</p>
+                                    <p>#{env.EMAIL}</p>
                                 </div>
                                 
                             </div>
@@ -52,7 +90,7 @@ export default class ContactUs
                         </a>
                         <div class='row mb-4'>
                             <div class='col-12 d-flex justify-content-around'>
-                                <a id='whatsapp-link'>
+                                <a class='whatsapp-link'>
                                     <i class='fab fa-whatsapp fa-2x whatsapp'></i>
                                 </a>
                                 <a id='facebook-link' href='https://www.facebook.com/nightcatdigitalsolutions'>
@@ -77,19 +115,19 @@ export default class ContactUs
                     <div class='order-1 order-md-2 col-12 col-md-6 mb-4 mb-md-0'>
                         <div class='row p-0 m-0 w-100'>
                             <div class='p-0 m-0 col-12 col-md-6'>
-                                <input id='contactName' type='text' class=' w-100  p-1 pl-md-2 mb-3 rounded-lg border' placeholder='Name' required/>
+                                <input id='contactName' type='text' class=' w-100  p-1 pl-md-2 mb-3 rounded-lg border' placeholder='#{@contactForm.name[@currentLang]}' required/>
                             </div>
                             <div class='p-0 m-0 col-12 col-md-6'>
-                                <input id='contactEmail' type='email' class=' w-100  p-1 pl-md-2 mb-3 rounded-lg border' placeholder='Email' required/>
+                                <input id='contactEmail' type='email' class=' w-100  p-1 pl-md-2 mb-3 rounded-lg border' placeholder='#{@contactForm.email[@currentLang]}' required/>
                             </div>
                             <div class='p-0 m-0 col-12'>
-                                <input id='contactSubject' type='text' class=' w-100  p-1 pl-md-2 mb-3 rounded-lg border' placeholder='Subject' required/>
+                                <input id='contactSubject' type='text' class=' w-100  p-1 pl-md-2 mb-3 rounded-lg border' placeholder='#{@contactForm.subject[@currentLang]}' required/>
                             </div>
                             <div class='p-0 m-0 col-12'>
-                                <textarea id='contactMessage' class=' w-100  p-1 pl-2 mb-3 rounded-lg border' rows='10' placeholder='Message' required></textarea>
+                                <textarea id='contactMessage' class=' w-100  p-1 pl-2 mb-3 rounded-lg border' rows='10' placeholder='#{@contactForm.message[@currentLang]}' required></textarea>
                             </div>
                             <div class='p-0 m-0 col-12'>
-                                <button id='contactForm-submitBtn' class='btn btn-info m-0 w-100' id='contact-form-submit'>Send</button>
+                                <button id='contactForm-submitBtn' class='btn btn-info m-0 w-100' id='contact-form-submit'>#{@contactForm.button[@currentLang]}</button>
                             </div>
                         </div>
                     </div>

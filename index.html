@@ -10,6 +10,11 @@
     <link rel="apple-touch-icon" href="./images/favicon/apple-touch-icon.png">
     <link rel="shortcut icon" href="./images/favicon/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Help to enchance Traditional Business Model to be better equipped post Covid 19 and Allow New Business operation to be run smoothly using Newest Technology Available" />
+    <meta name="keywords"
+        content="attendance system, ecommerce, customer ordering system, payment gateway, point of sales, reporting, web design, seo" />
+    <meta name="author" content="Nightcat Digital Solutions" />
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
     <!-- Google Fonts -->
@@ -18,7 +23,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
     <!-- Material Design Bootstrap -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
-    <title>Nightcat Digital Solutiions</title>
+    <title>Nightcat Digital Solutions</title>
 </head>
 
 
@@ -44,17 +49,17 @@
         aria-hidden="true" style="z-index:2000;">
         <div class="modal-dialog modal-full-height modal-bottom  modal-notify modal-warning" role="document">
             <div class="modal-content">
-                <div class="modal-header text-center">
-                    <p class="heading lead text-center">Warning</p>
+                <div class="modal-header justify-content-center">
+                    <p class="heading lead text-center" id='modalWarning-header'>Warning</p>
                 </div>
                 <div class="modal-body">
                     <div class="text-center">
                         <i class="fas fa-times fa-4x mb-3 animated rotateIn"></i>
-                        <div id='modalWatning-content'></div>
+                        <div id='modalWarning-content'></div>
                     </div>
                 </div>
                 <div class="modal-footer justify-content-center">
-                    <a id='modalWarning-dismiss' type="button" class="btn btn-warning w-50" data-dismiss="modal">OK</a>
+                    <a id='modalWarning-dismiss' type="button" class="btn btn-warning w-50" data-dismiss="modal"></a>
                 </div>
             </div>
         </div>
@@ -76,9 +81,6 @@
     <script type='text/javascript' src='/plugins/Smooth-Card-Carousel-jQuery-CSS3/scripts.js'></script>
     <script type='text/javascript'>
         $(document).ready(function () {
-            if (window.location.hash) {
-                history.replaceState(null, null, ' ');
-            }
 
             $('body').removeClass('preload');
             window.onhashchange = () => {
