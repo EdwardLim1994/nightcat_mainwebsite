@@ -8,7 +8,8 @@ import './plugins/Smooth-Card-Carousel-jQuery-CSS3/scripts.js'
 import Header from './components/scripts/renders/Header.coffee'
 import Home from './components/scripts/renders/Home.coffee'
 import Services from './components/scripts/renders/Services.coffee'
-import Products from './components/scripts/renders/Products.coffee'
+import Ecommerce from "./components/scripts/renders/Ecommerce.coffee"
+#import Products from './components/scripts/renders/Products.coffee'
 import AboutUs from './components/scripts/renders/AboutUs.coffee'
 import OurTeam from './components/scripts/renders/OurTeam.coffee'
 import Testimonial from './components/scripts/renders/Testimonial.coffee'
@@ -47,13 +48,14 @@ import "./images/ourteam/t3.jpg"
 import "./images/ourteam/t4.jpg"
 import "./images/partner/autocount.png"
 import "./images/partner/irs.png"
+import "./images/ecommerce/ecommerce-bg.jpg"
 # import "./images/products/celcom.jpg"
 # import "./images/products/hotlink.jpg"
 # import "./images/products/umobile.jpg"
-import "./images/products/autocount.jpg"
-import "./images/products/irs.jpg"
-import "./images/products/branch_report_1.jpg"
-import "./images/products/branch_report_2.jpg"
+# import "./images/products/autocount.jpg"
+# import "./images/products/irs.jpg"
+# import "./images/products/branch_report_1.jpg"
+# import "./images/products/branch_report_2.jpg"
 import "./images/services/attendance.jpg"
 # import "./images/services/bot.jpg"
 import "./images/services/ecommerce.jpg"
@@ -83,7 +85,8 @@ import "./images/favicon/favicon.ico"
 header = new Header()
 home = new Home()
 services = new Services()
-products = new Products()
+ecommerce = new Ecommerce()
+#products = new Products()
 aboutUs = new AboutUs()
 ourTeam = new OurTeam()
 testimonials = new Testimonial()
@@ -94,7 +97,7 @@ policy = new Policy()
 bottomUtilities = new BottomUtilities()
 
 # Set latest year on copyright notice
-$('#latestYear').text(new Date().getFullYear());
+$('#latestYear').text(new Date().getFullYear())
 
 # Set Initial html language
 if $.cookie('lang')
@@ -111,7 +114,7 @@ if (window.innerWidth > 900)
 	$('#home').css('margin-top', '10rem')
 	$('#policyContainer').html(policy.render()).css('margin-top', '15rem')
 	$('#header').html(header.render())
-	$('#products').html(products.render())
+	#$('#products').html(products.render())
 	$('#ourTeam').html(ourTeam.render())
 	$('#testimonials').html(testimonials.render())
 else 
@@ -119,11 +122,12 @@ else
 	$('#policyContainer').html(policy.render()).css('margin-top', '7.5rem')
 	$('#header').html(header.renderMobile())
 	$(header.renderMenu()).insertBefore('header')
-	$('#products').html(products.renderMobile())
+	#$('#products').html(products.renderMobile())
 	$('#ourTeam').html(ourTeam.renderMobile())
 	$('#testimonials').html(testimonials.renderMobile())
 
 $('#home').html(home.render())
+$('#ecommerce').html(ecommerce.render())
 $('#services').html(services.render())
 $('#aboutUs').html(aboutUs.render())
 $('#partners').html(partners.render())
@@ -143,5 +147,5 @@ socialMediaLink = new SocialMediaLink()
 switchLanguage = new SwitchLanguage()
 
 $(document).ready(() ->
-	AOS.init();
-);
+	AOS.init()
+)

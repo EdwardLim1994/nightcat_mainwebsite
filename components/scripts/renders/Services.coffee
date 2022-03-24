@@ -17,7 +17,7 @@ export default class Services
                 BM: "Apa yang pelanggan akan diterima dari kami",
                 CN: "我们所能提供给特别的客户"
             }
-            background: "light"
+            background: "dark"
         }
         @services = [
             {
